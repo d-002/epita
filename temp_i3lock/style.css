@@ -1,0 +1,199 @@
+@font-face {
+    font-family: hacker;
+    src: url("fonts/hacker.ttf");
+}
+
+@font-face {
+    font-family: seg;
+    src: url("fonts/7seg.ttf");
+}
+
+@font-face {
+    font-family: consolass;
+    src: url("fonts/consolas.ttf");
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: consolass;
+}
+
+body {
+    background-color: #000;
+    color: #ddd;
+}
+
+#matrix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.warning {
+    color: #f00 !important;
+    font-weight: bold;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    margin: 50px;
+    margin-bottom: 30px;
+    font-size: 50px;
+    font-family: hacker, consolass;
+    color: #7f7;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    font-family: seg;
+    color: #7f7;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 50px 150px;
+    padding: 30px;
+    box-shadow: 0 0 20px #111;
+    border: 2px solid black;
+    background-color: #222;
+}
+
+#main>h3 {
+    width: 100%;
+    border-bottom: 2px solid #555;
+    line-height: 0;
+    text-align: center;
+}
+
+#main>h3>span {
+    background-color: #222;
+    padding: 0 20px;
+    font-family: seg;
+    font-size: 30px;
+}
+
+#main>h4 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#main>p {
+    text-align: justify;
+    text-align-last: center;
+    max-width: 50%;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.block {
+    background-color: #232;
+    width: calc(30% - 40px);
+    padding: 10px;
+    border: 3px dashed #7f7;
+}
+
+.block.highlight {
+    border: 4px solid #f35;
+    background-color: #533;
+    color: #fff;
+}
+
+.block .star {
+    content: "";
+    background-image: url(star.png);
+    position: relative;
+    top: 0;
+    left: calc(100% - 20px);
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+
+    font-weight:bold;
+    color: #3f3;
+}
+
+.highlight a {
+    color: #f55;
+}
+
+a:not(.button):hover {
+    text-decoration: underline;
+}
+
+a.button {
+    display: block;
+    text-align: center;
+    margin: 20px;
+    margin-bottom: 0;
+    padding: 8px;
+
+    border: 1px solid #7f7;
+}
+
+a.button:hover {
+    background-color: #242;
+}
+
+.block>strong {
+    font-size: 20px;
+}
+
+.block>strong.test::after {
+    content: " (needs testing)";
+    color: #777;
+    font-size: 14px;
+    padding-bottom: 2px;
+}
+
+.block>strong.approved::after {
+    content: " (approved!)";
+    color: #a95;
+    font-size: 14px;
+    padding-bottom: 2px;
+}
+
+.block>p { font-size: 14px; }
+
+.codeblock {
+    padding: 10px;
+    border-radius: 10px;
+
+    font-family: courier new, consolass;
+    font-size: 18px;
+    font-weight: bold;
+
+    background-color: #111;
+    color: #999;
+}
+
+#changelog {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    list-style-type: none;
+}
+
+#changelog>li {
+    background-color: #333;
+    padding: 10px;
+}

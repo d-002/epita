@@ -1,0 +1,52 @@
+U=`whoami`
+if [ _$1 = _commit ]
+then
+  if [ _$3 = _ ]
+  then
+    echo "fatal: please specify a commit message"
+  else
+    echo "[master ea57c8c] $3"
+    sleep 1.5
+    echo " Commiter: <$U@r04p06.lv201.lyn-viv.sm.cri.epita.fr>"
+    sleep 0.5
+    echo Your name and email address were configurd automatically based:
+    echo on your username and hostname. Please check that they are accurate.:
+    echo You can suppress this message by setting them explicitely::
+    echo
+    echo "    git config --global user.name \"Your Name\""
+    echo "    git config --global user.email you@example.com"
+    echo
+    sleep 0.05
+    echo "After doing this, you may fix the identity used for this commit with:"
+    echo
+    echo "    git commit --amend --reset-author"
+    echo
+    sleep 1
+    printf "$N files changed, $((RANDOM%500+50)) insertions, $((RANDOM%100+20)) deletions\n"
+    P=`pwd`
+    sleep 0.1
+    echo "create mode $((RANDOM)) $P"
+  fi
+elif [ _$1 = _push ]
+then
+  N=$((RANDOM%10+5))
+  printf "\033[36mWelcome @$U from 10.57.12.58\033[37m\n"
+  sleep 0.9
+  echo "Enumerating objects: $N, done."
+  sleep 0.1
+  echo "Counting objects: 0% (0/$N)"
+  sleep 0.5
+  echo "Total $N (delta 4), reused 0 (delta 0), pack-reused 0"
+  echo
+  echo remote:
+  sleep 2
+  printf "remote: \033[31mPush to remote failed.\033[37m\n"
+  sleep 0.3
+  echo "fatal: unable to verify package integrity of data upload."
+  sleep 0.8
+  echo "Caused by: git.forge.epita.fr.SdkClientException: Unable to verify integrity of data upload. Client calculated content hash (contentMD5: undefined) didn't match hash calculated by git.forge.epita.fr"
+  sleep 0.03
+  echo "        at git.forge.epita.fr.uploadObject()"
+  sleep 0.03
+  echo "        at git.forge.epita.fr.putObject()"
+fi

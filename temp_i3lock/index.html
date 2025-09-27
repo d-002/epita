@@ -1,0 +1,180 @@
+<html>
+    <head>
+        <title>i3lock Teaching</title>
+        <link rel="stylesheet" href="style.css?v=1.5.2.1">
+        <script src="script.js?v=1.5.2.1"></script>
+    </head>
+    <body onload="javascript:init()">
+        <canvas id="matrix"></canvas>
+        <h1>i3lock Teaching</h1>
+        <h2>Small pranks to teach people i3locking</h2>
+        <div id="main">
+            <!-- Add 'class="test"' or 'class="approved"' to <strong> to add the corresponding text -->
+            <h4>Many more pranks to come, share your ideas with me!</h4>
+            <h3><span>Classic, but efficient pranks</span></h3>
+            <p>Note that these pranks are designed for EPITA machines, with Firefox. Just a reminder, this is all fun and games! None of these pranks are <i>actually</i> going to harm the victim, and they can easily be fixed/removed. Please don't get mad at me.</p>
+            <br class="sep">
+            <div class="container">
+                <div class="block">
+                    <strong>Fake i3lock</strong>
+                    <p>Fake i3lock screen, making the person stuck with incorrect password. Going fullscreen is recommended.</p>
+                    <a class="button" href="fake" target="_blank">Go to fake i3lock</a>
+                </div>
+                <div class="block">
+                    <br class="star">
+                    <strong>Git</strong>
+                    <p>Fake git, will execute in place of the actual git command. Will raise a dummy error when trying to push.<br>
+                    Follow these steps to install it:</p>
+                    <ol>
+                        <li><a href="scripts/git.txt" target="_blank" download="git.txt">Download the fake Git</a></li>
+                        <li>Open a new command line (this is to prevent the victim from seeing what we did using history)</li>
+                        <li>
+                            <p>Type the following command:</p>
+                            <p class="codeblock">
+                            cd ~/Downloads; mv ./git.txt ./git; chmod +x ./git; export PATH=~/Downloads:$PATH
+                            </p class="codeblock">
+                        </li>
+                    </ol>
+                </div>
+                <div class="block">
+                    <strong>Change keyboard config</strong>
+                    <p>Type one of these commands in the terminal:</p>
+                    <ul>
+                        <li>
+                            <p>German, only changes a few letters. Subtle and confusing.</p>
+                            <p class="codeblock">setxkbmap de</p>
+                        </li>
+                        <li>
+                            <p>French, more efficient, but less confusing</p>
+                            <p class="codeblock">setxkbmap fr</p>
+                        </li>
+                        <li>
+                            <p>Russian and Arabic. Even more confusing, may lead to rage quitting.
+                            <span class="warning">Be careful with other alphabets, as the victim may not be able to save their work before inevitably restarting their device.</span></p>
+                            <p class="codeblock">setxkbmap ru</p>
+                            <p class="codeblock">setxkbmap ar</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <h3><span>JS scripts with Tampermonkey</span></h3>
+            <p>I might make these into extensions for ease of use. Make sure to read the notice on how to run the scripts.</p>
+            <br>
+            <div class="container">
+                <div class="block highlight">
+                    <strong>Method to install scripts</strong>
+                    <ol>
+                        <li><a href="https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/" target="_blank">Install Tampermonkey if needed</a></li>
+                        <li>Get the desired script code using the following buttons</li>
+                        <li>Import the script
+                            <ul>
+                                <li>Open Tampermonkey from Firefox' top bar</li>
+                                <li>Click "Create a new script"</li>
+                                <li>Replace all contents with the code from the opened js file.</li>
+                                <li>Press Ctrl+S, and close Tampermonkey. The script will be active on any newly opened/reloaded page.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+                <div class="block">
+                    <br class="star">
+                    <strong>Constant 404</strong>
+                    <p>Any opened web page will trigger a 404 error.</p>
+                    <a href="scripts/404.js" target="_blank" class="button">Get 404 code</a>
+                </div>
+                <div class="block">
+                    <strong>Destroyer</strong>
+                    <p>All web pages have their content disappear out of thin air, in a fade out/zoom out animation.</p>
+                    <a href="scripts/destroyer.js" target="_blank" class="button">Get Destroyer code</a>
+                </div>
+                <div class="block">
+                    <strong>Epileptic invert</strong>
+                    <p>All hovered elements have their colors inverted</p>
+                    <a href="scripts/invert.js" target="_blank" class="button">Get Invert code</a>
+                </div>
+            </div>
+            <h3><span>Changelog</span></h3>
+            <ul id="changelog">
+                <li>1.5.2.1
+                    <ul>
+                        <li>Removed warning</li>
+                        <li>Changed changelog style</li>
+                        <li>Changed 3 font in title</li>
+                        <li>Changed red box link color</li>
+                    </ul>
+                </li>
+                <li>1.5.2
+                    <ul>
+                        <li>Changed block.highlight color</li>
+                        <li>Removed useless precisions</li>
+                        <li>Tested fake git</li>
+                    </ul>
+                </li>
+                <li>1.5.1.1
+                    <ul>
+                        <li>Only one command for fake git</li>
+                    </ul>
+                </li>
+                <li>1.5.1
+                    <ul>
+                        <li>Realistic fake i3lock colors</li>
+                    </ul>
+                </li>
+                <li>1.5
+                    <ul>
+                        <li>Fixed invert and git link</li>
+                        <li>Fixed matrix rain color overflow</li>
+                        <li>Fixed typo</li>
+                        <li>Tested pranks</li>
+                        <li>Small changes:</li>
+                        <ul>
+                            <li>Added .approved</li>
+                            <li>Changed .highlight color</li>
+                            <li>Changed .error into .warning</li>
+                            <li>Added comments for .tested and .approved</li>
+                        </ul>
+                    </ul>
+                </li>
+                <li>1.4
+                    <ul>
+                        <li>Added invert</li>
+                        <li>Changed backend files organization</li>
+                    </ul>
+                </li>
+                <li>1.3.1
+                    <ul>
+                        <li>Added changelog</li>
+                        <li>Visual bug fixes (matrix, flex)</li>
+                        <li>Fixed font warning</li>
+                    </ul>
+                </li>
+                <li>1.3
+                    <ul>
+                        <li>Added fake i3lock</li>
+                        <li>Bug fixes</li>
+                    </ul>
+                </li>
+                <li>1.2
+                    <ul>
+                        <li>Added fake git</li>
+                        <li>Added stars</li>
+                        <li>Added (needs testing)</li>
+                    </ul>
+                </li>
+                <li>1.1
+                    <ul>
+                        <li>Added 404</li>
+                        <li>Changed site layout</li>
+                        <li>Changed keyboard commands</li>
+                        <li>Bug fixes</li>
+                    </ul>
+                </li>
+                <li>1.0
+                    <ul>
+                        <li>Created i3lock page</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
