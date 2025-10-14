@@ -4,8 +4,62 @@ body, html {
 
     margin: 0;
     padding: 0;
+
+    font-family: public sans, calibri, sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    padding-top: 5rem;
 }
 
 #matrix {
+    z-index: -1;
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
     background-color: #000000;
+}
+
+h1 {
+    text-align: center;
+    font-family: dseg14, consolas, monospace;
+    font-size: 48px;
+
+    color: #00ff00;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+
+    width: 80%;
+    max-width: 800px;
+}
+
+#disclaimer {
+    margin-bottom: 3rem;
+    padding: .5em 4em;
+
+    border: 2px solid #f77e7e;
+    background-color: #ff5c5c30;
+    color: #f77e7e;
+    width: fit-content;
+}
+
+code {
+    font-family: sometype, consolas, monospace;
 }
