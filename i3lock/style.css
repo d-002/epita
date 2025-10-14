@@ -5,7 +5,7 @@ body, html {
     margin: 0;
     padding: 0;
 
-    font-family: public sans, calibri, sans-serif;
+    font-family: roboto mono, consolas, monospace;
     font-size: 20px;
     color: white;
 }
@@ -37,29 +37,120 @@ h1 {
     font-size: 48px;
 
     color: #00ff00;
+    text-shadow: 0 0 20px;
 }
 
 #main {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     gap: 2rem;
 
     width: 80%;
-    max-width: 800px;
+}
+
+#disclaimer, #disclaimer:before, .block {
+    border-radius: .4em;
+    backdrop-filter: blur(5px);
 }
 
 #disclaimer {
-    margin-bottom: 3rem;
-    padding: .5em 4em;
+    position: relative;
+    max-width: 800px;
 
-    border: 2px solid #f77e7e;
-    background-color: #ff5c5c30;
-    color: #f77e7e;
+    margin-bottom: 3rem;
+
+    border-color: #ff5c5c;
+    background-color: #ff5c5c20;
     width: fit-content;
+
+    text-align: justify;
 }
 
-code {
+#disclaimer:before {
+    content: "DISCLAIMER";
+    color: #ff5c5c;
+    background-color: #000000;
+    border: 2px solid #ff5c5c;
+    padding: .2em .4em;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(.7em, -50%);
+
+    text-shadow: 0 0 10px;
+}
+
+#disclaimer p {
+    color: #ff5c5c;
+}
+
+#confloose-list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.block {
+    padding: .5em 2em;
+    min-width: 300px;
+
+    background-color: #cccccc20;
+    border: 2px solid #cccccc;
+
+    text-shadow: 0 0 10px;
+}
+
+.block h3 {
+    margin: 1rem 0;
+}
+
+.block p {
+    color: #cccccc;
+}
+
+#confloose-list .block p {
+    margin: 0;
+    font-size: .8em;
+}
+
+.block code {
+    position: relative;
+
+    display: block;
+    margin: 1rem 0;
+    padding: 5px;
+    border: 2px solid #20402080;
+
     font-family: sometype, consolas, monospace;
+
+    background-color: #000000;
+    color: #00cc00;
+}
+
+.block code:hover {
+    border: 2px solid #008000;
+}
+
+.block code:hover:after {
+    content: "Click to copy";
+    cursor: pointer;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    padding: 5px;
+    box-sizing: border-box;
+
+    background-color: #80808050;
+    color: #00ee00;
+    backdrop-filter: blur(5px) brightness(0.6);
+    text-align: center;
 }

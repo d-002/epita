@@ -12,16 +12,31 @@
 
         <h1>/epita/confloose</h1>
 
+        <div id="disclaimer" class="block">
+            <p>Restez dans le fun, tous les conflooses présentés ici sont
+            réversibles. Soyez disponibles pour annuler les modifications
+            en utilisant les antidotes associées.</p>
+        </div>
+
         <div id="main">
-            <div id="disclaimer">
-                <p>Lorem ipsum dolor sit amet</p>
-            </div>
             <div id="confloose-list">
                 <div class="block">
                     <h3>Lorem ipsum</h3>
                     <p>Lorem ipsum dolor sit amet</p>
                     <p class="warning"></p>
-                    <code>wget rickroll.com</code>
+                    <code onclick="cpy(this)">curl rickroll.com</code>
+                </div>
+                <div class="block">
+                    <h3>Lorem ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet</p>
+                    <p class="warning"></p>
+                    <code onclick="cpy(this)">curl example.com</code>
+                </div>
+                <div class="block">
+                    <h3>Lorem ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet</p>
+                    <p class="warning"></p>
+                    <code onclick="cpy(this)">curl github.com</code>
                 </div>
             </div>
         </div>
@@ -29,4 +44,5 @@
 
     <!-- scripts -->
     <script type="module" src="/i3lock/app.js"></script>
+    <script src="/i3lock/copy.js"></script>
 </html>

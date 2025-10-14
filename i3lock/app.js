@@ -1,3 +1,6 @@
 import { RainManager } from "./rain.js";
 
-//const manager = new RainManager(document.getElementById("matrix"));
+// matrix rain
+const manager = new RainManager(document.getElementById("matrix"));
+manager.update();
+clearInterval(manager.interval);
