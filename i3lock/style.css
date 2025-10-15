@@ -169,6 +169,11 @@ h1 {
     border: 2px solid #008000;
 }
 
+.block code {
+    color: #00cc00;
+    font-family: sometype, consolas, monospace;
+}
+
 /* annotations */
 
 .annotation.needs-testing:before {
