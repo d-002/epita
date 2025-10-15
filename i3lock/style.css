@@ -16,7 +16,7 @@ body {
     align-items: center;
     gap: 2rem;
 
-    padding-top: 5rem;
+    padding: 5rem 0;
 }
 
 #matrix {
@@ -40,6 +40,8 @@ h1 {
     text-shadow: 0 0 20px;
 }
 
+/* main div, blocks */
+
 #main {
     display: flex;
     flex-direction: column;
@@ -55,17 +57,9 @@ h1 {
     backdrop-filter: blur(5px);
 }
 
-#confloose-list {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
 .block {
     padding: .5em 2em;
-    min-width: 300px;
+    width: 300px;
 
     background-color: #cccccc20;
     border: 2px solid #cccccc;
@@ -122,6 +116,16 @@ h1 {
 
 #explanation p {
     color: #ffc85c;
+}
+
+/* confloose list content */
+
+#confloose-list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .block h3 {
