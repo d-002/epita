@@ -52,9 +52,13 @@ h1 {
     width: 80%;
 }
 
-.block-alone, #disclaimer:before, .block {
+.block-alone, .block {
     border-radius: .4em;
     backdrop-filter: blur(5px);
+}
+
+.block-alone:before, .annotation:before {
+    border-radius: .4em;
 }
 
 .block {
@@ -75,27 +79,28 @@ h1 {
     text-align: justify;
 }
 
-.block-alone:before {
+.block-alone:before, .annotation:before {
     position: absolute;
     top: 0;
     left: 0;
     transform: translate(.7em, -50%);
     padding: .2em .4em;
 
+    border: 2px solid #000000;
     background-color: #000000;
     text-shadow: 0 0 10px;
 }
 
 #disclaimer {
+    width: fit-content;
     border-color: #ff5c5c;
     background-color: #ff5c5c20;
-    width: fit-content;
 }
 
 #disclaimer:before {
     content: "DISCLAIMER";
+    border-color: #ff5c5c;
     color: #ff5c5c;
-    border: 2px solid #ff5c5c;
 }
 
 #disclaimer p {
@@ -103,15 +108,15 @@ h1 {
 }
 
 #explanation {
+    width: fit-content;
     border-color: #ffc85c;
     background-color: #ffc85c20;
-    width: fit-content;
 }
 
 #explanation:before {
     content: "Comment ça marche ?";
+    border-color: #ffc85c;
     color: #ffc85c;
-    border: 2px solid #ffc85c;
 }
 
 #explanation p {
@@ -162,4 +167,18 @@ h1 {
 
 .block input:hover {
     border: 2px solid #008000;
+}
+
+/* annotations */
+
+.annotation.needs-testing:before {
+    content: "Needs testing";
+    border-color: #f34c4c;
+    color: #f34c4c;
+}
+
+.annotation.author-favorite:before {
+    content: "Author favorite";
+    border-color: #b359cd;
+    color: #b359cd;
 }
