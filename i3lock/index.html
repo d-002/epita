@@ -12,31 +12,41 @@
 
         <h1>/epita/confloose</h1>
 
-        <div id="disclaimer" class="block">
+        <div id="disclaimer" class="block-alone block">
             <p>Restez dans le fun, tous les conflooses présentés ici sont
-            réversibles. Soyez disponibles pour annuler les modifications
-            en utilisant les antidotes associées.</p>
+            réversibles. Soyez disponibles pour annuler les modifications en
+            utilisant les antidotes associés.</p>
+        </div>
+
+        <div id="explanation" class="block-alone block">
+            <p>Sélectionnez le confloose de votre choix (ou cliquez sur le mot
+            "Confloose") puis collez (Ctrl+Shift+V, Shift+Inser, Clic molette)
+            dans un terminal.<br> Pour désinstaller le confloose, faites de même
+            avec l'antidote correspondante.</p>
         </div>
 
         <div id="main">
             <div id="confloose-list">
                 <div class="block">
-                    <h3>Lorem ipsum</h3>
-                    <p>Lorem ipsum dolor sit amet</p>
-                    <p class="warning"></p>
-                    <code onclick="cpy(this)">curl rickroll.com</code>
+                    <h3>Fake git</h3>
+                    <p>Git est kc (il peut pas push)</p>
+                    <input type="text" onclick="clip(this)" value="curl https://d-002.github.io/epita/confloose/fake-git/confloose">
+                    <p>Antidote</p>
+                    <input type="text" onclick="clip(this)" value="curl https://d-002.github.io/epita/confloose/fake-git/antidote">
                 </div>
                 <div class="block">
-                    <h3>Lorem ipsum</h3>
-                    <p>Lorem ipsum dolor sit amet</p>
-                    <p class="warning"></p>
-                    <code onclick="cpy(this)">curl example.com</code>
+                    <h3>Clavier en russe</h3>
+                    <p>haha keyboard go brrrr</p>
+                    <a onclick="clip(this)">Confloose</a>
+                    <p>Antidote</p>
+                    <a onclick="clip(this)">Antidote</a>
                 </div>
                 <div class="block">
-                    <h3>Lorem ipsum</h3>
-                    <p>Lorem ipsum dolor sit amet</p>
-                    <p class="warning"></p>
-                    <code onclick="cpy(this)">curl github.com</code>
+                    <h3>Clavier en allemand</h3>
+                    <p>Plus subtil, seulement certaines lettres changent de place</p>
+                    <a onclick="clip(this)">Confloose</a>
+                    <p>Antidote</p>
+                    <a onclick="clip(this)">Antidote</a>
                 </div>
             </div>
         </div>
@@ -44,5 +54,5 @@
 
     <!-- scripts -->
     <script type="module" src="/i3lock/app.js"></script>
-    <script src="/i3lock/copy.js"></script>
+    <script src="/i3lock/clip.js"></script>
 </html>
