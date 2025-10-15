@@ -182,3 +182,7 @@ h1 {
     border-color: #b359cd;
     color: #b359cd;
 }
+
+.block.annotation {
+    margin-top: 1em;
+}
