@@ -6,6 +6,5 @@ Oh and also confloose
 - low res
 - flip screen
 - flip mouse movement
-- remove test /**/?
 - sleep 1
 - fake shell

@@ -1,4 +1,4 @@
 #!/bin/sh
 
-echo "setxkbmap de; test \"confloose by leo\"" >> "$HOME/.bashrc"
+echo "setxkbmap de; # confloose by leo" >> "$HOME/.bashrc"
 setxkbmap de
