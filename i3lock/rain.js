@@ -1,4 +1,4 @@
-const XSTEP = 15, YSTEP = 16;
+const XSTEP = 11, YSTEP = 12;
 
 class Rain {
   constructor(manager, y_span) {
@@ -50,7 +50,6 @@ export class RainManager {
     self.addEventListener("resize", () => this.resize());
 
     this.ctx = elt.getContext("2d");
-    this.ctx.font = YSTEP + "px consolas";
     this.ctx.fillStyle = "#000000";
     this.ctx.textBaseline = "top";
 
@@ -60,7 +59,7 @@ export class RainManager {
     this.interval = self.setInterval(() => this.update(), 100);
   }
 
-  get_number = () => Math.floor(this.W * this.H / 50);
+  get_number = () => Math.floor(this.W * this.H / 100);
 
   resize() {
     // update canvas size
@@ -70,6 +69,7 @@ export class RainManager {
     this.H = self.innerHeight;
     this.canvas.setAttribute("width", this.W);
     this.canvas.setAttribute("height", this.H);
+    this.ctx.font = YSTEP + "px consolas";
 
     // update rain count
     this.W = Math.floor(this.W / XSTEP);
