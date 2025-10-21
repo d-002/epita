@@ -31,13 +31,21 @@ body {
     background-color: #000000;
 }
 
-h1 {
+h1, h2 {
     text-align: center;
     font-family: dseg14, consolas, monospace;
-    font-size: 48px;
 
     color: #00ff00;
     text-shadow: 0 0 20px;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 24px;
+    margin: 1em 0 0 0;
 }
 
 @media (max-width: 700px) {
@@ -233,14 +241,14 @@ input:hover {
 
 .annotation.needs-testing:before {
     content: "Needs testing";
-    border-color: #f34c4c;
-    color: #f34c4c;
+    border-color: #b359cd;
+    color: #b359cd;
 }
 
 .annotation.author-favorite:before {
     content: "Author favorite";
-    border-color: #b359cd;
-    color: #b359cd;
+    border-color: #e1c75d;
+    color: #e1c75d;
 }
 
 .block.annotation {
