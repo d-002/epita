@@ -23,22 +23,26 @@ export function listenSelection() {
     const listener = elts.list.addEventListener("click", evt => {
         let confloose;
 
+        let elt = evt.target;
+        if (elt.tagName == "INPUT")
+            return;
+
         while (1) {
-            confloose = evt.target.getAttribute("attached");
+            confloose = elt.getAttribute("attached");
             if (confloose != null)
                 break; // reached the tile element
 
-            if (evt.target == elts.list)
+            if (elt == elts.list)
                 return; // did not select an interesting element
 
-            if (evt.target == document)
+            if (elt == document)
                 return; // fallback
 
-            evt = evt.parentNode;
+            elt = elt.parentNode;
         }
 
-        evt.target.classList.toggle("selected");
-        if (evt.target.classList.contains("selected"))
+        elt.classList.toggle("selected");
+        if (elt.classList.contains("selected"))
             selected.push(confloose);
         else
             selected.splice(selected.indexOf(confloose), 1);
