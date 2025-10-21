@@ -76,7 +76,6 @@ h2 {
 }
 
 .block {
-    margin: 0 5%;
     padding: .5em 2em;
     width: 300px;
 
@@ -84,6 +83,12 @@ h2 {
     border: 2px solid #cccccc;
 
     text-shadow: 0 0 10px;
+}
+
+@media (max-width: 700px) {
+    .block {
+        margin: 0 5%;
+    }
 }
 
 .block-alone {
