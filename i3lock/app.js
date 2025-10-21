@@ -8,7 +8,7 @@ const listener = listenSelection();
 
 setupAntidotes();
 
-if (true) {
-    rain.update();
-    clearInterval(rain.interval);
-}
+/*
+rain.update();
+clearInterval(rain.interval);
+*/

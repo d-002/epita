@@ -40,6 +40,12 @@ h1 {
     text-shadow: 0 0 20px;
 }
 
+@media (max-width: 700px) {
+    h1 {
+        font-size: 24px;
+    }
+}
+
 /* main div, blocks */
 
 #main {
@@ -62,6 +68,7 @@ h1 {
 }
 
 .block {
+    margin: 0 5%;
     padding: .5em 2em;
     width: 300px;
 
@@ -173,7 +180,8 @@ h1 {
 
 #command-container {
     width: 100%;
-    padding: 10px 0;
+    padding: 10px 5%;
+    box-sizing: border-box;
 
     display: flex;
     justify-content: center;
@@ -184,6 +192,12 @@ h1 {
     backdrop-filter: blur(5px);
     border: 2px solid #808080;
     border-width: 2px 0 2px 0;
+}
+
+@media (max-width: 700px) {
+    #command-container {
+        flex-direction: column;
+    }
 }
 
 input {
