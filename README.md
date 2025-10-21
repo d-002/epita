@@ -6,4 +6,3 @@ Oh and also confloose
 - low res
 - flip screen
 - flip mouse movement
-- sleep 1

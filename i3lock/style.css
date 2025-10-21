@@ -154,7 +154,7 @@ h2 {
     transition: .3s;
 }
 
-#confloose-list .block p {
+#confloose-list .block p:noh(:has(a)) {
     margin: .5rem 0;
     color: #cccccc;
     font-size: .8em;
@@ -253,4 +253,13 @@ input:hover {
 
 .block.annotation {
     margin-top: 1em;
+}
+
+a {
+    color: #00cc00;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
