@@ -1,9 +1,14 @@
 import { RainManager } from "./rain.js";
+import { setupAntidotes } from "./antidote.js";
+import { listenSelection } from "./selection.js";
 
 // matrix rain
-const manager = new RainManager(document.getElementById("matrix"));
+const rain = new RainManager(document.getElementById("matrix"));
+const listener = listenSelection();
 
-if (false) {
-    manager.update();
-    clearInterval(manager.interval);
+setupAntidotes();
+
+if (true) {
+    rain.update();
+    clearInterval(rain.interval);
 }

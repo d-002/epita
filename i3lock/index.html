@@ -12,104 +12,101 @@
 
         <h1>/epita/confloose</h1>
 
-        <div id="disclaimer" class="block-alone block">
+        <div id="disclaimer" class="block block-alone">
             <p>Restez dans le fun, tous les conflooses présentés ici sont
             réversibles. Soyez disponibles pour annuler les modifications en
             utilisant les antidotes associés.</p>
         </div>
 
-        <div id="explanation" class="block-alone block">
-            <p>Sélectionnez le confloose de votre choix puis collez
-            (Ctrl+Shift+V, Shift+Inser ou Clic molette) dans un terminal.<br>
-            Pour désinstaller le confloose, faites de même avec l'antidote
-            correspondante.</p>
+        <div id="explanation" class="block block-alone">
+            <p>Sélectionnez le.s confloose.s de votre choix puis collez
+            (Ctrl+Shift+V, Shift+Inser ou Clic molette) la commande dans un
+            terminal.<br> Pour désinstaller le.s confloose.s, faites les
+            opérations préliminaires si besoin, puis cliquez sur l'antidote et
+            collez dans un terminal.</p>
+        </div>
+
+        <div id="command-container">
+            <span id="count">0 sélectionnés</span>
+            <span>-</span><span>cliquer pour copier :</span>
+            <input type="text" id="command" onclick="clip(this)" readonly="readonly">
         </div>
 
         <div id="main">
             <div id="confloose-list">
-                <div class="block annotation needs-testing">
-                    <h3>Fake i3lock</h3>
-                    <p>i3lock est kc (le mot de passe est toujours faux) (mais on est logout quand même)</p>
-                    <input type="text" onclick="clip(this)" value="curl https://d-002.github.io/epita/confloose/fake-i3lock/confloose.sh | sh">
+                <div class="block annotation needs-testing" attached="fake-i3lock">
+                    <p class="title">Fake i3lock</p>
+                    <p class="description">i3lock est kc (le mot de passe est toujours faux) (mais on est logout quand même).</p>
                     <p>Antidote : aller dans un tty, taper <code>pkill i3lock</code>, logout, retourner dans i3, puis :</p>
-                    <input type="text" onclick="clip(this)" value="curl https://d-002.github.io/epita/confloose/fake-i3lock/antidote.sh | sh">
+                    <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
-                <div class="block annotation needs-testing">
-                    <h3>Fake git</h3>
+                <div class="block annotation needs-testing" attached="fake-git">
+                    <p class="title">Fake git</p>
                     <p>Git est kc (il peut pas push)</p>
-                    <input type="text" onclick="clip(this)" value="curl https://d-002.github.io/epita/confloose/fake-git/confloose.sh | sh">
-                    <p>Antidote</p>
-                    <input type="text" onclick="clip(this)" value="curl https://d-002.github.io/epita/confloose/fake-git/antidote.sh | sh">
+                    <p>Antidote :</p>
+                    <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
-                <div class="block annotation needs-testing">
-                    <h3>Clavier en russe</h3>
+                <div class="block annotation needs-testing" attached="ru-keyboard">
+                    <p class="title">Clavier en russe</p>
                     <p>haha keyboard go brrrr</p>
-                    <input type="text" onclick="clip(this)" value="curl https://d-002.github.io/epita/confloose/ru-keyboard/confloose.sh | sh">
-                    <p>Antidote</p>
-                    <input type="text" onclick="clip(this)" value="curl https://d-002.github.io/epita/confloose/ru-keyboard/antidote.sh | sh">
+                    <p>Antidote :</p>
+                    <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
-                <div class="block annotation needs-testing">
-                    <h3>Clavier en allemand</h3>
-                    <p>Plus subtil, seulement certaines lettres changent de place</p>
-                    <input type="text" onclick="clip(this)" value="curl https://d-002.github.io/epita/confloose/de-keyboard/confloose.sh | sh">
-                    <p>Antidote</p>
-                    <input type="text" onclick="clip(this)" value="curl https://d-002.github.io/epita/confloose/de-keyboard/antidote.sh | sh">
+                <div class="block annotation needs-testing" attached="de-keyboard">
+                    <p class="title">Clavier en allemand</p>
+                    <p>Plus subtil, seulement certaines lettres changent de
+                    <p>Antidote :</p>
+                    <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
+                    place</p>
                 </div>
-                <div class="block annotation needs-testing">
-                    <h3>vim = exit</h3>
-                    <p>Thou shalt not edit code</p>
-                    <input type="text" onclick="clip(this)" value="curl https://d-002.github.io/epita/confloose/editor-kill/confloose.sh | sh">
-                    <p>Antidote</p>
-                    <input type="text" onclick="clip(this)" value="curl https://d-002.github.io/epita/confloose/editor-kill/antidote.sh | sh">
+                <div class="block annotation needs-testing" attached="editor-kill">
+                    <p class="title">vim = exit</p>
+                    <p>Ouvrir tout éditeur ferme le terminal qui l'a ouvert</p>
+                    <p>Antidote :</p>
+                    <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
-                <div class="block annotation needs-testing">
-                    <h3>vim = i3lock</h3>
+                <div class="block annotation needs-testing" attached="editor-lock">
+                    <p class="title">vim = i3lock</p>
                     <p>Ouvrir un éditeur ? More like i3lock</p>
-                    <input type="text" onclick="clip(this)" value="curl https://d-002.github.io/epita/confloose/editor-lock/confloose.sh | sh">
-                    <p>Antidote</p>
-                    <input type="text" onclick="clip(this)" value="curl https://d-002.github.io/epita/confloose/editor-lock/antidote.sh | sh">
+                    <p>Antidote :</p>
+                    <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
-                <div class="block annotation needs-testing">
-                    <h3>Mod3 <> Mod4</h3>
+                <div class="block annotation needs-testing" attached="change-mod">
+                    <p class="title">Mod3 <> Mod4</p>
                     <p>Echange la touche Mod pour i3</p>
-                    <input type="text" onclick="clip(this)" value="curl https://d-002.github.io/epita/confloose/change-mod/confloose.sh | sh">
-                    <p>Antidote</p>
-                    <input type="text" onclick="clip(this)" value="curl https://d-002.github.io/epita/confloose/change-mod/antidote.sh | sh">
+                    <p>Antidote :</p>
+                    <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
-                <div class="block annotation needs-testing">
-                    <h3>Left <> Right</h3>
+                <div class="block annotation needs-testing" attached="change-direction">
+                    <p class="title">Left <> Right</p>
                     <p>Echange les touches de mouvement pour i3</p>
-                    <input type="text" onclick="clip(this)" value="curl https://d-002.github.io/epita/confloose/change-directions/confloose.sh | sh">
-                    <p>Antidote</p>
-                    <input type="text" onclick="clip(this)" value="curl https://d-002.github.io/epita/confloose/change-directions/antidote.sh | sh">
+                    <p>Antidote :</p>
+                    <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
-                <div class="block annotation needs-testing">
-                    <h3>No terminal</h3>
-                    <p>Win+Enter ne marche plus</p>
-                    <input type="text" onclick="clip(this)" value="curl https://d-002.github.io/epita/confloose/no-terminal/confloose.sh | sh">
-                    <p>Antidote</p>
-                    <input type="text" onclick="clip(this)" value="curl https://d-002.github.io/epita/confloose/no-terminal/antidote.sh | sh">
+                <div class="block annotation needs-testing" attached="no-terminal">
+                    <p class="title">No terminal</p>
+                    <p>Mod+Enter ne marche plus</p>
+                    <p>Antidote :</p>
+                    <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
-                <div class="block annotation needs-testing">
-                    <h3>No dmenu</h3>
-                    <p>Win+d ne marche plus</p>
-                    <input type="text" onclick="clip(this)" value="curl https://d-002.github.io/epita/confloose/no-dmenu/confloose.sh | sh">
-                    <p>Antidote</p>
-                    <input type="text" onclick="clip(this)" value="curl https://d-002.github.io/epita/confloose/no-dmenu/antidote.sh | sh">
+                <div class="block annotation needs-testing" attached="no-dmenu">
+                    <p class="title">No dmenu</p>
+                    <p>Mod+d ne marche plus</p>
+                    <p>Antidote :</p>
+                    <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
-                <div class="block annotation needs-testing">
-                    <h3>Daemon terminal</h3>
-                    <p>Un terminal s'ouvre tout seul toutes les quelques secondes</p>
-                    <input type="text" onclick="clip(this)" value="curl https://d-002.github.io/epita/confloose/daemon-terminal/confloose.sh | sh">
-                    <p>Antidote</p>
-                    <input type="text" onclick="clip(this)" value="curl https://d-002.github.io/epita/confloose/daemon-terminal/antidote.sh | sh">
+                <div class="block annotation needs-testing" attached="daemon-terminal">
+                    <p class="title">Daemon terminal</p>
+                    <p>Un terminal s'ouvre tout seul toutes les quelques
+                    secondes</p>
+                    <p>Antidote :</p>
+                    <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
-                <div class="block annotation needs-testing">
-                    <h3>Ragebait Alacritty</h3>
+                <div class="block annotation needs-testing" attached="alacritty-color">
+                    <p class="title">Ragebait Alacritty</p>
                     <p>Un thème questionnable pour Alacritty</p>
-                    <input type="text" onclick="clip(this)" value="curl https://d-002.github.io/epita/confloose/alacritty-color/confloose.sh | sh">
-                    <p>Antidote</p>
-                    <input type="text" onclick="clip(this)" value="curl https://d-002.github.io/epita/confloose/alacritty-color/antidote.sh | sh">
+                    <p>Antidote :</p>
+                    <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
             </div>
         </div>

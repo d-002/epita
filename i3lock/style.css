@@ -133,28 +133,69 @@ h1 {
     width: 100%;
 }
 
-.block h3 {
-    margin: 1rem 0;
-}
+#confloose-list .block {
+    cursor: pointer;
 
-.block p {
-    color: #cccccc;
+    transition: .3s;
 }
 
 #confloose-list .block p {
-    margin: 0;
+    margin: .5rem 0;
+    color: #cccccc;
     font-size: .8em;
+
+    pointer-events: none;
 }
 
-.block input {
+#confloose-list .block p.title {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: #ffffff;
+}
+
+#confloose-list .block:not(.selected):not(:hover) {
+    color: #aaaaaa;
+    border-color: #aaaaaa;
+    background-color: #55555570;
+    backdrop-filter: blur(20px);
+    filter: saturate(0);
+}
+
+#confloose-list .block.selected {
+    border-color: #aa3333;
+    background-color: #aa333320;
+    box-shadow: 0 0 50px #aa3333a0;
+}
+
+#confloose-list .block.selected p {
+    color: #ffdddd;
+}
+
+#command-container {
+    width: 100%;
+    padding: 10px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    background-color: #80808050;
+    backdrop-filter: blur(5px);
+    border: 2px solid #808080;
+    border-width: 2px 0 2px 0;
+}
+
+input {
     position: relative;
     cursor: pointer;
 
     display: block;
     margin: 1rem 0;
     padding: 5px;
-    border: 2px solid #20402080;
+    border: 2px solid #50705080;
     width: 100%;
+    max-width: 300px;
 
     font-family: sometype, consolas, monospace;
     font-size: 1rem;
@@ -165,7 +206,7 @@ h1 {
     overflow: hidden;
 }
 
-.block input:hover {
+input:hover {
     border: 2px solid #008000;
 }
 
