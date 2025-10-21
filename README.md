@@ -7,4 +7,3 @@ Oh and also confloose
 - flip screen
 - flip mouse movement
 - sleep 1
-- fake shell
