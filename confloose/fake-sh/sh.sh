@@ -13,5 +13,5 @@ ps1="$(echo "$ps1" | sed -E "s/[\][wW](\W)/$(basename $(pwd))\1/g")"
 while true; do
     printf "$ps1"
     read cmd
-    echo "bash: $cmd�: command not found"
+    echo "bash: $cmd: command not found"
 done
