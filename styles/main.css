@@ -1,0 +1,43 @@
+/* fonts */
+
+@font-face {
+    src: url("/epita/fonts/DSEG14Classic-Regular.ttf");
+    font-family: dseg14;
+    font-display: swap;
+}
+
+@font-face {
+    src: url("/epita/fonts/PublicSans-Regular.ttf");
+    font-family: public sans;
+    font-display: swap;
+}
+
+@font-face {
+    src: url("/epita/fonts/RobotoMono-Regular.ttf");
+    font-family: roboto mono;
+    font-display: swap;
+}
+
+@font-face {
+    src: url("/epita/fonts/SometypeMono-Regular.ttf");
+    font-family: sometype;
+    font-display: swap;
+}
+
+/* general styling */
+
+body, html {
+    width: 100%;
+    min-height: 100%;
+
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

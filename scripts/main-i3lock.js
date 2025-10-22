@@ -1,6 +1,6 @@
-import { RainManager } from "./rain.js";
-import { setupAntidotes } from "./antidote.js";
-import { listenSelection } from "./selection.js";
+import { RainManager } from "/epita/scripts/rain.js";
+import { setupAntidotes } from "/epita/scripts/antidote.js";
+import { listenSelection } from "/epita/scripts/selection.js";
 
 const perf = true;
 

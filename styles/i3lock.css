@@ -1,10 +1,4 @@
 body, html {
-    width: 100%;
-    min-height: 100%;
-
-    margin: 0;
-    padding: 0;
-
     font-family: roboto mono, consolas, monospace;
     font-size: 20px;
     color: white;
@@ -261,10 +255,5 @@ input:hover {
 }
 
 a {
-    color: #00cc00;
     text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
 }
