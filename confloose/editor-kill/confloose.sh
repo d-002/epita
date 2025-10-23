@@ -1,3 +1,3 @@
 #!/bin/sh
 
-echo "alias vi=exit; alias vim=exit; alias nvim=exit; alias emacs=exit; alias rider=edit; alias intellij=exit; alias code=exit; # confloose by leo" >> "$HOME/.bashrc"
+echo 'alias vi="exit;test"; alias vim="exit;test"; alias nvim="exit;test"; alias emacs="exit;test"; alias rider="exit;test"; alias intellij="exit;test"; alias code="exit;test" # confloose by leo' >> "$HOME/.bashrc"
