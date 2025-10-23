@@ -4,5 +4,9 @@ backup="$HOME/.config/i3/config.bak"
 conf="$HOME/.config/i3/config"
 
 [ -f "$backup" ] && mv "$backup" "$conf"
-rm "$backup"
 i3-msg reload
+
+IFS=$'\n'
+for output in $(xrandr | sed -nE "s/(^\S+) connected.*$/\1/p"); do
+    xrandr --output "$output" --rotate normal
+done

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 trap 'printf "\n$ps1"' INT
 
