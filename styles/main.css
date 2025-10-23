@@ -24,7 +24,19 @@
     font-display: swap;
 }
 
-/* general styling */
+@font-face {
+    src: url("/epita/fonts/TurretRoad-Bold.ttf");
+    font-family: turret road;
+    font-display: swap;
+}
+
+@font-face {
+    src: url("/epita/fonts/Raleway-Regular.ttf");
+    font-family: raleway;
+    font-display: swap;
+}
+
+/* general */
 
 body, html {
     width: 100%;

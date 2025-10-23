@@ -1,0 +1,174 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    --footer-height: 4rem;
+    padding-bottom: var(--footer-height);
+
+    background-image: url("/epita/images/grain.svg"), linear-gradient(55deg, #B3BFD9, #F6EBFF);
+    background-repeat: repeat, no-repeat;
+    background-blend-mode: overlay, normal;
+    color: #102B65;
+    font-family: raleway, sans-serif;
+    font-weight: 400;
+}
+
+h1, h2 {
+    font-family: turret road, monospace;
+    -webkit-font-smoothing: none;
+}
+
+h1, footer {
+    background-color: #000B2180;
+    backdrop-filter: blur(5px);
+}
+
+h1 {
+    width: 100%;
+    padding: .3em .3em;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-size: 5rem;
+    color: #FFFFFF;
+}
+
+h2 {
+    color: #B70D7F;
+    font-size: 3.75rem;
+}
+
+h3 {
+    font-weight: normal;
+    font-size: 2.8125rem;
+}
+
+h4 {
+    font-weight: normal;
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 1em 0;
+    padding-left: 1em;
+
+    border-left: 3px solid #102B6550;
+}
+
+code {
+    font-family: consolas, monospace;
+    color: #B70D7F;
+}
+
+li>* {
+    margin: .5em 0;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: var(--footer-height);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    box-sizing: border-box;
+
+    color: #FFFFFF;
+    font-size: 1.2rem;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* nav */
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    background-color: #000B21;
+    color: #30B3E7;
+}
+
+nav a {
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 1em;
+}
+
+nav a:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+nav a:not(.active):hover {
+    background-color: #1A2438;
+    filter: brightness(1.1);
+}
+
+nav a.active {
+    background-color: #30B3E7;
+    color: #FFFFFF;
+}
+
+/* pages */
+
+#main {
+    width: 60%;
+    max-width: 1200px;
+    flex: 1;
+    padding: 3rem;
+    padding-top: 0;
+
+    background-color: #FFFFFF;
+}
+
+@media (max-width: 600px) {
+    #main {
+        width: 100%;
+        padding: 0 10%;
+        box-sizing: border-box;
+    }
+}
+
+.page.hidden {
+    display: none;
+}
+
+a.button {
+    display: block;
+    width: fit-content;
+    margin: 2em 0;
+    padding: .5em;
+
+    border: 3px solid #B70D7F;
+    color: #B70D7F;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+a.button:hover {
+    background-color: #B70D7F;
+    color: #FFFFFF;
+    text-decoration: none;
+}

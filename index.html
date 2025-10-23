@@ -2,11 +2,70 @@
     <head>
         <link rel="stylesheet" href="/epita/styles/main.css">
         <link rel="stylesheet" href="/epita/styles/epita.css">
-        <title>epita</title>
+        <title>d-002/EPITA</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
     <body>
-        <p>Lorem ipsum</p>
+        <h1>d-002/EPITA</h1>
+        <nav id="main-nav">
+            <a onclick="swapPage(this)" page-name="home" class="active">Home</a>
+            <a onclick="swapPage(this)" page-name="i3lock">i3lock</a>
+            <a onclick="swapPage(this)" page-name="extensions">Chromium extensions</a>
+            <a onclick="swapPage(this)" page-name="github">GitHub profile</a>
+        </nav>
+
+        <div id="main">
+            <div class="page" page-name="home">
+                <h2>Home</h2>
+                <p>Small services used during my years at EPITA</p>
+                <h3><strong>Featured</strong> - i3lock</h3>
+                <a href="/epita/i3lock" class="button">Visit i3lock</a>
+            </div>
+
+            <div class="page hidden" page-name="i3lock">
+                <h2>i3lock</h2>
+                <p>Collection of <a href="">confloose</a> to teach EPITA students to <a href="">i3lock</a></p>
+                <a href="/epita/i3lock" class="button">Visit i3lock</a>
+            </div>
+
+            <div class="page hidden" page-name="extensions">
+                <h2>Helpful Chromium extensions</h2>
+                <h3><strong>List</strong> of extensions</h3>
+                <ul>
+                    <li>
+                        <h4><strong>Moodle</strong> enhancements</h4>
+                        <p>Dark theme, more concise and readable classes blocks, auto-hide cookie popup</p>
+                        <p>All these options are manually toggleable.</p>
+                        <a href="/epita/extensions/moodle_enhancements.zip" class="button" download>Download</a>
+                    </li>
+                </ul>
+                <h3><strong>Extensions install guide</strong> for Chromium</h3>
+                <ul>
+                    <li>Download the extension as a zip file, then unzip it somewhere persistent (like your AFS on the PIE).</li>
+                    <li>Open your browser and go to <code>chrome://extensions</code> (or the name of your browser, like <code>opera://extensions</code>.</li>
+                    <li>Toggle <i>Developer mode</i> on.</li>
+                    <li>Click on <i>Load unpacked.</i></li>
+                    <li>Select the directory you just unzipped.</li>
+                </ul>
+                <p>Notice: when the extension receives an update, you should replace the extension directory by the new one.</p>
+                <p>Until further notice, my extensions do not auto-update, to allow you to have greater control over your data.</p>
+            </div>
+
+            <div class="page hidden" page-name="github">
+                <h2>GitHub profile</h2>
+                <p>My personal GitHub account profile.</p>
+                <a href="https://github.com/d-002" class="button" target="_blank">Visit profile</a>
+                <p>My GitHub homepage.</p>
+                <a href="/" class="button" target="_blank">Visit homepage</a>
+            </div>
+        </div>
+
+        <footer>
+            <p>I am not affiliated with EPITA in any way, just a student. I do not own the name nor brand "EPITA" nor any of their assets.</p>
+        </footer>
     </body>
+
+    <!-- scripts -->
+    <script src="/epita/scripts/pageSwap.js"></script>
 </html>
