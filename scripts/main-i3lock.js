@@ -2,7 +2,7 @@ import { RainManager } from "/epita/scripts/rain.js";
 import { setupAntidotes } from "/epita/scripts/antidote.js";
 import { listenSelection } from "/epita/scripts/selection.js";
 
-const perf = true;
+const perf = false;
 
 // matrix rain
 const rain = new RainManager(document.getElementById("matrix"));

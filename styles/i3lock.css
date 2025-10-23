@@ -1,8 +1,11 @@
 /* general */
 
+html {
+    font-size: 20px;
+}
+
 body, html {
     font-family: roboto mono, consolas, monospace;
-    font-size: 20px;
     color: white;
 }
 

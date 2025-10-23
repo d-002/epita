@@ -7,7 +7,6 @@ body {
     flex-direction: column;
     align-items: center;
     --footer-height: 4rem;
-    padding-bottom: var(--footer-height);
 
     background-image: url("/epita/images/grain.svg"), linear-gradient(55deg, #B3BFD9, #F6EBFF);
     background-repeat: repeat, no-repeat;
@@ -111,6 +110,8 @@ nav {
 }
 
 nav a {
+    transition: .3s;
+
     font-weight: bold;
     font-size: 1.5rem;
     padding: 1em;
@@ -139,6 +140,7 @@ nav a.active {
     flex: 1;
     padding: 3rem;
     padding-top: 0;
+    padding-bottom: calc(3rem + var(--footer-height));
 
     background-color: #FFFFFF;
 }
@@ -155,14 +157,19 @@ nav a.active {
     display: none;
 }
 
+a:not(nav a) {
+    color: #B70D7F;
+}
+
 a.button {
+    transition: .3s;
+
     display: block;
     width: fit-content;
     margin: 2em 0;
     padding: .5em;
 
     border: 3px solid #B70D7F;
-    color: #B70D7F;
     font-weight: bold;
     font-size: 1.5rem;
 }
