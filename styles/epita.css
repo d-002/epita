@@ -6,7 +6,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    --footer-height: 4rem;
 
     background-image: url("/epita/images/grain.svg"), linear-gradient(55deg, #B3BFD9, #F6EBFF);
     background-repeat: repeat, no-repeat;
@@ -77,17 +76,16 @@ li>* {
 }
 
 footer {
-    position: fixed;
+    position: sticky;
     left: 0;
     bottom: 0;
 
     width: 100%;
-    height: var(--footer-height);
 
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2em;
+    padding: .5em 2em;
     box-sizing: border-box;
 
     color: #FFFFFF;
@@ -100,13 +98,22 @@ footer p {
 
 /* nav */
 
+header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
 nav {
     display: flex;
-    flex-wrap: wrap;
+    overflow: none auto;
     width: 100%;
 
     background-color: #000B21;
     color: #30B3E7;
+    box-shadow: 0 10px 30px #000B2150;
+    z-index: 1;
 }
 
 nav a {
@@ -139,8 +146,6 @@ nav a.active {
     max-width: 1200px;
     flex: 1;
     padding: 3rem;
-    padding-top: 0;
-    padding-bottom: calc(3rem + var(--footer-height));
 
     background-color: #FFFFFF;
 }
