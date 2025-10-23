@@ -1,6 +1,7 @@
 #!/bin/sh
 
 U=`whoami`
+N=$((RANDOM%10+5))
 if [ _$1 = _commit ]
 then
   if [ _$3 = _ ]
@@ -18,7 +19,6 @@ then
   fi
 elif [ _$1 = _push ]
 then
-  N=$((RANDOM%10+5))
   printf "\033[36mWelcome @$U from 10.100.123.85\033[37m\n"
   sleep 0.9
   echo "Enumerating objects: $N, done."
@@ -29,7 +29,7 @@ then
   echo
   echo remote:
   sleep 2
-  printf "remote: \033[31mPush failed.\033[37m\n"
+  printf "remote: \033[31mPush to remote failed.\033[37m\n"
   sleep 0.3
   echo "fatal: unable to verify package integrity of data upload."
   sleep 0.8

@@ -1,4 +1,4 @@
 #!/bin/sh
 
-pkill "confloose-daemon-terminal"
+pkill -f "confloose-daemon-terminal"
 sed -i "s/^.*confloose by leo.*$//g" "$HOME/.bashrc"
