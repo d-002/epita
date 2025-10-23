@@ -42,104 +42,104 @@
 
         <div id="main">
             <div id="confloose-list">
-                <div class="block annotation needs-testing author-favorite" attached="fake-i3lock">
+                <div class="block annotation in-progress needs-testing author-favorite" attached="fake-i3lock">
                     <p class="title">Fake i3lock</p>
                     <p class="description">i3lock est kc (le mot de passe est toujours faux) (mais on est logout quand même).</p>
-                    <p>Antidote : aller dans un tty, taper <code>pkill i3lock</code>, logout, retourner dans i3, puis :</p>
+                    <p>Antidote : aller dans un tty, taper <code>pkill i3lock</code>, retourner dans i3, puis :</p>
                     <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
-                <div class="block annotation needs-testing author-favorite" attached="fake-sh">
+                <div class="block annotation author-favorite" attached="fake-sh">
                     <p class="title">Fake shell</p>
                     <p class="description">Bash est kc (aucune commande ne marche quand on ouvre un terminal).</p>
-                    <p>Antidote :</p>
+                    <p>Antidote : aller dans un tty, taper la commande suivante puis recharger tous les émulateurs de terminaux :</p>
                     <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
-                <div class="block annotation needs-testing" attached="fake-git">
+                <div class="block" attached="fake-git">
                     <p class="title">Fake git</p>
                     <p>Git est kc (il peut pas push)</p>
                     <p>Antidote :</p>
                     <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
-                <div class="block annotation needs-testing" attached="ru-keyboard">
+                <div class="block" attached="ru-keyboard">
                     <p class="title">Clavier en russe</p>
                     <p>haha keyboard go brrrr</p>
-                    <p>Antidote :</p>
+                    <p>Antidote : aller dans un tty, modifier le bashrc en remplaçant le <code>ru</code> dans <code>setxkbmap ru</code> par <code>us</code>, retourner dans i3, ouvrir un terminal (si vous avez autre chose que <code>Mod+Enter</code> bon courage faut fermer i3 avec <code>i3-msg exit</code> dans un tty), puis :</p>
                     <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
-                <div class="block annotation needs-testing" attached="de-keyboard">
+                <div class="block" attached="de-keyboard">
                     <p class="title">Clavier en allemand</p>
                     <p>Plus subtil, seulement certaines lettres changent de place</p>
                     <p>Antidote :</p>
                     <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
-                <div class="block annotation needs-testing" attached="editor-kill">
+                <div class="block" attached="editor-kill">
                     <p class="title">vim = exit</p>
                     <p>Ouvrir tout éditeur ferme le terminal qui l'a ouvert</p>
                     <p>Antidote :</p>
                     <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
-                <div class="block annotation needs-testing" attached="editor-lock">
+                <div class="block" attached="editor-lock">
                     <p class="title">vim = i3lock</p>
                     <p>Ouvrir un éditeur ? More like i3lock</p>
                     <p>Antidote :</p>
                     <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
-                <div class="block annotation needs-testing" attached="change-mod">
+                <div class="block" attached="change-mod">
                     <p class="title">Mod3 <> Mod4</p>
                     <p>Echange la touche Mod pour i3</p>
                     <p>Antidote :</p>
                     <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
-                <div class="block annotation needs-testing" attached="change-direction">
+                <div class="block" attached="change-direction">
                     <p class="title">Left <> Right</p>
                     <p>Echange les touches de mouvement pour i3</p>
                     <p>Antidote :</p>
                     <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
-                <div class="block annotation needs-testing" attached="no-terminal">
+                <div class="block" attached="no-terminal">
                     <p class="title">No terminal</p>
                     <p>Mod+Enter ne marche plus</p>
-                    <p>Antidote :</p>
+                    <p>Antidote : si pas de terminal disponible, il reste toujours <code>Mod+D</code>, et si c'est aussi désactivé alors rétablir la config i3 depuis un tty en utilisant le <code>.bak</code> puis reload</p>
                     <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
-                <div class="block annotation needs-testing" attached="no-dmenu">
+                <div class="block" attached="no-dmenu">
                     <p class="title">No dmenu</p>
-                    <p>Mod+d ne marche plus</p>
+                    <p><code>Mod+D</code> ne marche plus</p>
                     <p>Antidote :</p>
                     <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
-                <div class="block annotation needs-testing" attached="daemon-terminal">
+                <div class="block" attached="daemon-terminal">
                     <p class="title">Daemon terminal</p>
-                    <p>Un terminal s'ouvre tout seul toutes les quelques secondes</p>
+                    <p>Des applications random s'ouvrent toutes seules toutes les quelques secondes</p>
                     <p>Antidote :</p>
                     <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
-                <div class="block annotation needs-testing" attached="alacritty-color">
+                <div class="block" attached="alacritty-color">
                     <p class="title">Ragebait Alacritty</p>
                     <p>Un thème questionnable pour Alacritty</p>
                     <p>Antidote :</p>
                     <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
-                <div class="block annotation needs-testing" attached="sleep">
+                <div class="block" attached="sleep">
                     <p class="title">Sleep</p>
                     <p>Bash fait dodo (attend 1s de plus à chaque lancement d'un terminal)</p>
                     <p>Idée par <a href="https://discord.com/channels/1349374089198047334/1349374632033128469/1417582750906581054">Céleste</a></p>
-                    <p>Antidote :</p>
+                    <p>Antidote : le confloose peut générer un grand nombre de lignes vides dans le bashrc si exécuté plusieurs fois, cela n'a aucun effet mais vous pouvez les supprimer manuellement, sinon :</p>
                     <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
-                <div class="block annotation needs-testing" attached="low-res">
+                <div class="block annotation in-progress needs-testing" attached="low-res">
                     <p class="title">Low-res</p>
                     <p>Back to the 80s</p>
                     <p>Antidote :</p>
                     <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
-                <div class="block annotation needs-testing" attached="flip-screen">
+                <div class="block annotation in-progress needs-testing" attached="flip-screen">
                     <p class="title">Flip screen</p>
                     <p>Tourne l'écran</p>
                     <p>Antidote :</p>
                     <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
-                <div class="block annotation needs-testing" attached="cheese">
+                <div class="block annotation in-progress needs-testing" attached="cheese">
                     <p class="title">Cheese</p>
                     <p>La souris avance comme une souris bourrée qui a mangé trop de cheese</p>
                     <p>Antidote :</p>

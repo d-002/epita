@@ -243,16 +243,22 @@ input:hover {
 
 /* annotations */
 
+.annotation.author-favorite:before {
+    content: "Author favorite";
+    border-color: #e1c75d;
+    color: #e1c75d;
+}
+
 .annotation.needs-testing:before {
     content: "Needs testing";
     border-color: #b359cd;
     color: #b359cd;
 }
 
-.annotation.author-favorite:before {
-    content: "Author favorite";
-    border-color: #e1c75d;
-    color: #e1c75d;
+.annotation.in-progress:before {
+    content: "Work in progress";
+    border-color: #b359cd;
+    color: #b359cd;
 }
 
 .block.annotation {
@@ -261,4 +267,5 @@ input:hover {
 
 a {
     text-decoration: none;
+    color: #00cc00;
 }
