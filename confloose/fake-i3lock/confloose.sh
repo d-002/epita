@@ -1,5 +1,7 @@
 #!/bin/sh
 
+nix profile install nixpkgs#xorg.libxcb
+
 tempdir=$(mktemp -d)
 cd "$tempdir"
 git clone https://github.com/ItzaPhenix/epi3lock
