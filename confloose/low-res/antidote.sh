@@ -1,7 +1,7 @@
 #!/bin/sh
 
-backup="$HOME/.config/i3/config.bak"
 conf="$HOME/.config/i3/config"
+backup="$HOME/.config/i3/config.bak"
 
 [ -f "$backup" ] && mv "$backup" "$conf"
 i3-msg restart
