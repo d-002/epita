@@ -10,4 +10,4 @@ IFS=$'\n'
 for output in $(xrandr | sed -nE "s/(^\S+) connected.*$/\1/p"); do
     echo "exec xrandr --output \"$output\" --rotate inverted" >> "$conf"
 done
-i3-msg reload
+i3-msg restart

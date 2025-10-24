@@ -1,6 +1,7 @@
 #!/bin/sh
 
-#nix profile install nixpkgs#xorg.libxcb
+# todo: make this prettier
+nix profile install nixpkgs#xorg.libxcb nixpkgs#libxkbcommon
 
 tempdir=$(mktemp -d)
 cd "$tempdir"

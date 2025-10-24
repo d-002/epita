@@ -241,6 +241,10 @@ input:hover {
     font-family: sometype, consolas, monospace;
 }
 
+#main p.center {
+    text-align: center;
+}
+
 /* annotations */
 
 .annotation.author-favorite:before {
