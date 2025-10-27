@@ -241,7 +241,7 @@ input:hover {
     font-family: sometype, consolas, monospace;
 }
 
-#main p.center {
+p.center {
     text-align: center;
 }
 
