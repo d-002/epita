@@ -1,7 +1,7 @@
 <html>
     <head>
-        <link rel="stylesheet" href="/epita/styles/main.css?v=1.0.1">
-        <link rel="stylesheet" href="/epita/styles/i3lock.css?v=1.0.1">
+        <link rel="stylesheet" href="/epita/styles/main.css?v=1.0.2">
+        <link rel="stylesheet" href="/epita/styles/i3lock.css?v=1.0.2">
         <title>EPITA/confloose</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -42,16 +42,22 @@
 
         <div id="main">
             <div id="confloose-list">
-                <div class="block annotation author-favorite" attached="fake-i3lock">
-                    <p class="title">Fake i3lock</p>
-                    <p class="description">i3lock est kc (le mot de passe est toujours faux) (mais on est logout quand même).</p>
-                    <p>Antidote : aller dans un tty, taper <code>pkill i3lock</code>, retourner dans i3, se référer à l'antidote "clavier en russe", puis :</p>
+                <div class="block annotation author-favorite needs-testing" attached="xkill">
+                    <p class="title">Killer mouse</p>
+                    <p class="description">Après ouverture d'un terminal, cliquer n'importe où force kill la fenetre cliquée.</p>
+                    <p>Antidote : sans cliquer avec la souris, taper :</p>
                     <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
                 <div class="block annotation author-favorite" attached="fake-sh">
                     <p class="title">Fake shell</p>
                     <p class="description">Bash est kc (aucune commande ne marche quand on ouvre un terminal).</p>
-                    <p>Antidote : aller dans un tty, taper la commande suivante puis recharger tous les émulateurs de terminaux :</p>
+                    <p>Antidote : aller dans un tty et taper :</p>
+                    <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
+                </div>
+                <div class="block annotation" attached="fake-i3lock">
+                    <p class="title">Fake i3lock</p>
+                    <p class="description">i3lock est kc (le mot de passe est toujours faux) (mais on est logout quand même).</p>
+                    <p>Antidote : aller dans un tty, taper <code>pkill i3lock</code>, retourner dans i3, se référer à l'antidote "clavier en russe", puis :</p>
                     <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
                 <div class="block" attached="fake-git">
