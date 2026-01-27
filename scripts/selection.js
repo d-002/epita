@@ -10,7 +10,10 @@ function updateSelected() {
     if (selected.length != 0)
         data = `echo $(curl https://d-002.github.io/epita/confloose/master-install.sh) ${selected.join(" ")} | sh`;
 
-    elts.command.children[0].textContent = `${selected.length} sélectionnés`;
+    let word = "sélectionné"
+    if (selected.length >= 2)
+        word += "s";
+    elts.command.children[0].textContent = `${selected.length} ${word}`;
     elts.command.children[3].value = data;
 }
 
