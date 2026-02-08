@@ -107,7 +107,7 @@ header {
 
 nav {
     display: flex;
-    overflow: none auto;
+    overflow: auto;
     width: 100%;
 
     background-color: #000B21;
