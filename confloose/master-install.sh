@@ -5,7 +5,7 @@ install() {
         HOME=~
     fi
     dir="$HOME/.confloose"
-    file="$dir/list"
+    file="$dir/confloose.lock"
     mkdir -p "$dir"
 
     # optional separator between different confloose installs
