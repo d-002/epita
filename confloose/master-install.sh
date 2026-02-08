@@ -15,6 +15,7 @@ install() {
         echo "To avoid confusion, please remove the list once you uninstall all the different confloose." >> "$file"
     fi
 
+    date >> "$file"
     echo "Find below a list of all the installed confloose on this machine." >> "$file"
     echo -e "Go to from \`d-002.github.io/epita\` to remove them one by one:\n" >> "$file"
 
