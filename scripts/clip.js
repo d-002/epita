@@ -1,6 +1,6 @@
 function clip(elt) {
-    navigator.clipboard.writeText(elt.textContent);
+    navigator.clipboard.writeText(elt.value);
 
-    // also select field if the user wants to copy in a different way
+    // also select field to fill in the system clipboard
     elt.select();
 }
