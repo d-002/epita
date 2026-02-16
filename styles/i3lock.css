@@ -116,6 +116,31 @@ body>p {
     margin: 0 30px;
 }
 
+h3.category-header {
+    position: relative;
+
+    width: 100%;
+    margin-bottom: .5em;
+
+    text-align: center;
+    font-size: 30px;
+}
+
+h3.category-header:after {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    content: "";
+    display: block;
+
+    width: 80%;
+    height: 3px;
+
+    background-color: #a8ffa35c;
+}
+
 /* main div, blocks */
 
 #main {
@@ -207,21 +232,23 @@ body>p {
 
 /* confloose list content */
 
-#confloose-list {
+.confloose-list {
     display: flex;
     gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
+
     width: 100%;
+    max-width: 1300px;
 }
 
-#confloose-list .block {
+.confloose-list .block {
     cursor: pointer;
 
     transition: .3s;
 }
 
-#confloose-list .block p:noh(:has(a)) {
+.confloose-list .block p:noh(:has(a)) {
     margin: .5rem 0;
     color: #cccccc;
     font-size: .8em;
@@ -229,13 +256,13 @@ body>p {
     pointer-events: none;
 }
 
-#confloose-list .block p.title {
+.confloose-list .block p.title {
     font-size: 1.5rem;
     margin: 1rem 0;
     color: #ffffff;
 }
 
-#confloose-list .block:not(.selected):not(:hover) {
+.confloose-list .block:not(.selected):not(:hover) {
     color: #aaaaaa;
     border-color: #aaaaaa;
     background-color: #55555570;
@@ -243,13 +270,13 @@ body>p {
     filter: saturate(0);
 }
 
-#confloose-list .block.selected {
+.confloose-list .block.selected {
     border-color: #aa3333;
     background-color: #aa333320;
     box-shadow: 0 0 50px #aa3333a0;
 }
 
-#confloose-list .block.selected p {
+.confloose-list .block.selected p {
     color: #ffdddd;
 }
 
