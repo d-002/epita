@@ -1,7 +1,7 @@
 const selected = [];
 
 const elts = {
-    list: null,
+    lists: null,
     command: null
 };
 
@@ -19,11 +19,11 @@ function updateSelected() {
 
 export function listenSelection() {
     // update elts
-    elts.list = document.getElementById("confloose-list");
+    elts.lists = document.getElementsByClassName("confloose-list");
     elts.command = document.getElementById("command-container");
 
     // set up listener
-    const listener = elts.list.addEventListener("click", evt => {
+    Array.from(elts.lists).forEach(list => addEventListener("click", evt => {
         let confloose;
 
         let elt = evt.target;
@@ -35,7 +35,7 @@ export function listenSelection() {
             if (confloose != null)
                 break; // reached the tile element
 
-            if (elt == elts.list)
+            if (elt == list)
                 return; // did not select an interesting element
 
             if (elt == document)
@@ -50,7 +50,5 @@ export function listenSelection() {
         else
             selected.splice(selected.indexOf(confloose), 1);
         updateSelected();
-    });
-
-    return listener;
+    }));
 }
