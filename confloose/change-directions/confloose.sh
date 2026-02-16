@@ -8,4 +8,7 @@ touch "$conf"
 sed -i "s/Left/TEMP_DIR/g" "$conf"
 sed -i "s/Right/Left/g" "$conf"
 sed -i "s/TEMP_DIR/Right/g" "$conf"
+sed -i "s/Up/TEMP_DIR/g" "$conf"
+sed -i "s/Down/Up/g" "$conf"
+sed -i "s/TEMP_DIR/Down/g" "$conf"
 i3-msg reload
