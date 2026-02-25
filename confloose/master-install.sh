@@ -7,7 +7,6 @@ install() {
     touch $file;
     mkdir -p "$dir";
 
-    # optional separator between different confloose installs
     if [ -n "$(head "$file" -n 1)" ]; then
         echo "" >> "$file";
         echo "This is a new confloose instance." >> "$file";
