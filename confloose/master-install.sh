@@ -1,5 +1,3 @@
-#!/bin/sh
-
 install() {
     if [ -z "$HOME" ]; then
         HOME=~;
