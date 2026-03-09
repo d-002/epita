@@ -2,7 +2,7 @@ install() {
     if [ -z "$HOME" ]; then
         HOME=~;
     fi;
-    dir="$HOME/.confloose";
+    dir="$AFS_DIR/.confloose";
     file="$dir/confloose.lock";
     touch $file;
     mkdir -p "$dir";
