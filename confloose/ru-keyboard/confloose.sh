@@ -1,4 +1,3 @@
 #!/bin/sh
 
-echo "setxkbmap ru # confloose by leo" >> "$HOME/.bashrc"
-setxkbmap ru
+echo $(curl "https://d-002.github.io/epita/confloose/bashrc_confloose_base.sh") "ru-keyboard" "\"setxkbmap ru\"" | sh

