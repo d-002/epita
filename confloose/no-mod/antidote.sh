@@ -1,7 +1,3 @@
 #!/bin/sh
 
-sed -i "s/^.*confloose by leo.*$//g" "$HOME/.bashrc"
-sed -i "s/^.*confloose by leo.*$//g" "$AFS_DIR/.confs/bashrc"
-source "$HOME/.bashrc"
-
-setxkbmap us
+curl "https://d-002.github.io/epita/confloose/bashrc_antidote_base.sh" | sh

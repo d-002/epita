@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <link rel="stylesheet" href="../styles/main.css?v=1.1.1">
-        <link rel="stylesheet" href="../styles/i3lock.css?v=1.1.1">
+        <link rel="stylesheet" href="../styles/main.css?v=1.1.2">
+        <link rel="stylesheet" href="../styles/i3lock.css?v=1.1.2">
         <title>EPITA/confloose</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -26,9 +26,11 @@
         <h1>EPITA/CONFLOOSE</h1>
 
         <div id="disclaimer" class="block block-alone">
-            <p>Restez dans le fun, tous les conflooses présentés ici sont
-            réversibles. Soyez disponibles pour annuler les modifications en
-            utilisant les antidotes associés.</p>
+            <p>L'auteur se décharge de toute responsabilité pour l'utilisation
+            des confloose. Soyez disponibles pour annuler les modifications en
+            utilisant les antidotes associés. Vous êtes responsable de
+            l'utilisation du code présent dans ce site, et devez être disponible
+            en cas de non-fonctionnement des antidotes.</p>
         </div>
 
         <div id="explanation" class="block block-alone">
@@ -38,8 +40,8 @@
             Pour désinstaller le.s confloose.s, faites les opérations
             préliminaires si besoin, copiez l'antidote et collez dans un
             terminal.<br>
-            La liste des confloose installés est disponible dans
-            <code>$HOME/.confloose/list</code>.</p>
+            <strong>La liste des confloose installés est disponible dans
+            <code>$AFS_DIR/.confloose/confloose.lock</code>.</strong></p>
         </div>
 
         <div id="command-container">
@@ -74,19 +76,19 @@
 
             <h3 class="category-header">i3-related stuff</h3>
             <div class="confloose-list">
-                <div class="block annotation needs-testing" attached="change-mod">
+                <div class="block annotation" attached="change-mod">
                     <p class="title">Win <> Alt</p>
                     <p>Echange la touche Mod pour i3 entre Windows et Alt</p>
                     <p>Antidote :</p>
                     <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
-                <div class="block annotation needs-testing" attached="no-mod">
+                <div class="block annotation broken" attached="no-mod">
                     <p class="title">No mod</p>
                     <p>Désactive complètement la touche mod pour i3.</p>
                     <p>Antidote :</p>
                     <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
-                <div class="block" attached="change-direction">
+                <div class="block" attached="change-directions">
                     <p class="title">Left <> Right</p>
                     <p>Echange les touches de mouvement pour i3</p>
                     <p>Antidote :</p>
@@ -168,7 +170,7 @@
                     <p>Antidote : le confloose peut générer un grand nombre de lignes vides dans le bashrc si exécuté plusieurs fois, cela n'a aucun effet mais vous pouvez les supprimer manuellement, sinon :</p>
                     <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
-                <div class="block annotation needs-testing" attached="set-e">
+                <div class="block annotation" attached="set-e">
                     <p class="title">set -e</p>
                     <p>Pour encourager le perfect programming, chaque commande ratée kill bash</p>
                     <p>Idée par finthalion</p>
@@ -207,12 +209,9 @@
                 </div>
             </div>
         </div>
-
-        <h2>Bientot : swamp water</h2>
-        <p>Un wrapper autour de n'importe quel confloose pour rendre sa désactivation très difficile</p>
     </body>
 
     <!-- scripts -->
-    <script type="module" src="../scripts/main-i3lock.js?v=1.1.1"></script>
-    <script src="../scripts/clip.js?v=1.1.1"></script>
+    <script type="module" src="../scripts/main-i3lock.js?v=1.1.2"></script>
+    <script src="../scripts/clip.js?v=1.1.2"></script>
 </html>

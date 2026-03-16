@@ -1,4 +1,3 @@
 #!/bin/sh
 
-echo "setxkbmap de # confloose by leo" >> "$HOME/.bashrc"
-setxkbmap de
+echo $(curl "https://d-002.github.io/epita/confloose/bashrc_confloose_base.sh") "de-keyboard" "'setxkbmap de'" | sh

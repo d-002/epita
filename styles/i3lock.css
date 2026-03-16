@@ -349,6 +349,12 @@ input:hover {
     color: #b359cd;
 }
 
+.annotation.broken:before {
+    content: "Broken in this version";
+    border-color: #50b3c1;
+    color: #51a0b9;
+}
+
 .annotation.in-progress:before {
     content: "Work in progress";
     border-color: #b359cd;
