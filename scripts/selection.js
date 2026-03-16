@@ -23,7 +23,7 @@ export function listenSelection() {
     elts.command = document.getElementById("command-container");
 
     // set up listener
-    Array.from(elts.lists).forEach(list => addEventListener("click", evt => {
+    Array.from(elts.lists).forEach(list => list.addEventListener("click", evt => {
         let confloose;
 
         let elt = evt.target;
