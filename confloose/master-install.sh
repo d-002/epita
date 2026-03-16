@@ -4,8 +4,8 @@ install() {
     fi;
     dir="$AFS_DIR/.confloose";
     file="$dir/confloose.lock";
-    touch $file;
     mkdir -p "$dir";
+    touch $file;
 
     if [ -n "$(head "$file" -n 1)" ]; then
         echo "" >> "$file";
