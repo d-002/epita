@@ -1,6 +1,6 @@
-import { RainManager } from "../scripts/rain.js";
-import { setupAntidotes } from "../scripts/antidote.js";
-import { listenSelection } from "../scripts/selection.js";
+import { RainManager } from "../scripts/rain.js?v=1.1.4";
+import { setupAntidotes } from "../scripts/antidote.js?v=1.1.4";
+import { listenSelection } from "../scripts/selection.js?v=1.1.4";
 
 // true when the focus is performance over visuals
 const perf = false;
