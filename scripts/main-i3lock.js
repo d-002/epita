@@ -2,6 +2,7 @@ import { RainManager } from "../scripts/rain.js";
 import { setupAntidotes } from "../scripts/antidote.js";
 import { listenSelection } from "../scripts/selection.js";
 
+// true when the focus is performance over visuals
 const perf = false;
 
 // matrix rain
