@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <link rel="stylesheet" href="../styles/main.css?v=1.1.4">
-        <link rel="stylesheet" href="../styles/i3lock.css?v=1.1.4">
+        <link rel="stylesheet" href="../styles/main.css?v=1.1.5">
+        <link rel="stylesheet" href="../styles/i3lock.css?v=1.1.5">
         <title>EPITA/confloose</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -57,19 +57,19 @@
                 <div class="block annotation author-favorite needs-testing" attached="fake-gcc">
                     <p class="title">Fake GCC</p>
                     <p class="description">gcc est kc (pas de stdlib, de for, de while, de variable "i", true = false etc.</p>
-                    <p>Antidote : aller dans un tty et taper :</p>
+                    <p>Antidote :</p>
                     <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
                 <div class="block annotation author-favorite" attached="fake-sh">
                     <p class="title">Fake shell</p>
                     <p class="description">Bash est kc (aucune commande ne marche quand on ouvre un terminal).</p>
-                    <p>Antidote : aller dans un tty et taper :</p>
+                    <p>Antidote : aller dans un tty, puis :</p>
                     <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
                 <div class="block" attached="fake-i3lock">
                     <p class="title">Fake i3lock</p>
                     <p class="description">i3lock est kc (le mot de passe est toujours faux) (mais on est logout quand même).</p>
-                    <p>Antidote : aller dans un tty, taper <code>pkill i3lock</code>, retourner dans i3, se référer à l'antidote "clavier en russe", puis :</p>
+                    <p>Antidote : si i3lock est lancé, aller dans un tty, taper <code>pkill i3lock</code> et se référer à l'antidote "clavier en russe", mais dans tous les cas :</p>
                     <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
                 <div class="block" attached="fake-git">
@@ -211,6 +211,6 @@
     </body>
 
     <!-- scripts -->
-    <script type="module" src="../scripts/main-i3lock.js?v=1.1.4"></script>
-    <script src="../scripts/clip.js?v=1.1.4"></script>
+    <script type="module" src="../scripts/main-i3lock.js?v=1.1.5"></script>
+    <script src="../scripts/clip.js?v=1.1.5"></script>
 </html>
