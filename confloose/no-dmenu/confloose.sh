@@ -7,4 +7,4 @@ touch $conf
 [ -f "$backup" ] || cp "$conf" "$backup"
 sed -i "s/^.*bindsym.*\+d\W.*$//g" "$conf"
 sed -i "s/^.*bindsym.*\+D\W.*$//g" "$conf"
-i3-msg reload
+i3-msg restart

@@ -8,4 +8,4 @@ touch "$conf"
 sed -i "s/Mod4/Mod5/g" "$conf"
 sed -i "s/Mod3/Mod4/g" "$conf"
 sed -i "s/Mod4/Mod3/g" "$conf"
-i3-msg reload
+i3-msg restart
