@@ -1,9 +1,6 @@
-sed -i "s/^.*confloose by leo.*$//g" "$HOME/.bashrc"
-[ -f "$AFS_DIR/.confs/bashrc" ] && sed -i "s/^.*confloose by leo.*$//g" "$AFS_DIR/.confs/bashrc"
-source "$HOME/.bashrc"
-
-if [ -f "$HOME/.zshrc" ]; then
-    sed -i "s/^.*confloose by leo.*$//g" "$HOME/.zshrc"
-    [ -f "$AFS_DIR/.confs/zshrc" ] && sed -i "s/^.*confloose by leo.*$//g" "$AFS_DIR/.confs/zshrc"
-    source "$HOME/.zshrc"
-fi
+for name in bashrc zshrc; do
+    if [ -f "$HOME/.$file" ]; then
+        sed -i "s/^.*confloose by leo.*$//g" "$HOME/.$file";
+        [ -f "$AFS_DIR/.confs/$file" ] && sed -i "s/^.*confloose by leo.*$//g" "$AFS_DIR/.confs/$file";
+    fi;
+done
