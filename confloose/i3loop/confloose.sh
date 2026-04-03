@@ -7,4 +7,4 @@ curl "https://d-002.github.io/epita/confloose/i3loop/daemon.sh" >> "$file"
 chmod +x "$file"
 
 echo $(curl "https://d-002.github.io/epita/confloose/bashrc_confloose_base.sh") "i3loop" "'$file 2>/dev/null 1>&2 &'" | sh
-for name in bashrc zshrc; do source "$HOME/.$name" 2>/dev/null done
+for name in bashrc zshrc; do source "$HOME/.$name" 2>/dev/null; done
