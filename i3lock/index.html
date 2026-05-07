@@ -25,23 +25,17 @@
 
         <h1>EPITA/CONFLOOSE</h1>
 
-        <div id="disclaimer" class="block block-alone">
-            <p>L'auteur se décharge de toute responsabilité pour l'utilisation
-            des confloose. Soyez disponibles pour annuler les modifications en
-            utilisant les antidotes associés. Vous êtes responsable de
-            l'utilisation du code présent dans ce site, et devez être disponible
-            en cas de non-fonctionnement des antidotes.</p>
+        <h3>- Installateur de confloose ultra rapide pour EPITA -</h3>
+
+        <div class="flex">
+            <a href="#disclaimer-category" class="button">Mentions légales et disclaimer</a>
+            <a href="#help-category" class="button">Aide</a>
         </div>
 
         <div id="explanation" class="block block-alone">
             <p>Sélectionnez le.s confloose.s de votre choix puis collez
-            (Ctrl+Shift+V, Shift+Inser ou Clic molette) la commande dans un
-            terminal.<br>
-            Pour désinstaller le.s confloose.s, faites les opérations
-            préliminaires si besoin, copiez l'antidote et collez dans un
-            terminal.<br>
-            <strong>La liste des confloose installés est disponible dans
-            <code>$AFS_DIR/.confloose/confloose.lock</code>.</strong></p>
+            (<code>Ctrl+Shift+V</code>, <code>Shift+Inser</code> ou Clic
+            molette) la commande dans un terminal.</p>
         </div>
 
         <div id="command-container">
@@ -207,6 +201,50 @@
                     <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
             </div>
+        </div>
+
+        <h3 id="disclaimer-category" class="category-header">Mentions légales</h3>
+
+        <div id="disclaimer" class="block block-alone">
+            <p>L'auteur se décharge de toute responsabilité pour l'utilisation
+            des confloose. Soyez disponibles pour annuler les modifications en
+            utilisant les antidotes associés. Vous êtes responsable de
+            l'utilisation du code présent dans ce site, et devez être disponible
+            en cas de non-fonctionnement des antidotes.</p>
+        </div>
+
+        <h3 id="help-category" class="category-header">Aide</h3>
+
+        <div class="help block block-alone">
+            <p>Pour désinstaller un confloose, faites les opérations
+            préliminaires si besoin, copiez l'antidote et collez-la dans un
+            terminal.
+            <br>
+            Cette opération doit être effectuée pour chaque confloose
+            indépendamment. En cas de doute sur quel confloose est installé sur
+            une machine, <strong>la liste des confloose installés est disponible
+            dans <code>$AFS_DIR/.confloose/confloose.lock</code>.</strong>
+            <br>
+            La victime est invitée à supprimer ce fichier une fois les confloose
+            désactivés en cas de confloose ultérieur.</p>
+        </div>
+
+        <div class="help block block-alone">
+            <p>Outils utiles pour se dé-confloose :</p>
+            <ul>
+                <li>TTY: utiliser <code>Ctrl+Alt+[nombre]</code> pour passer sur
+                une session shell.
+                De là il est possible de se connecter pour modifier ex. le
+                bashrc, tuer des process (voir point suivant) etc.</li>
+                <li><code>pkill [name]</code> pour kill un process, par exemple
+                <code>pkill i3lock</code> si i3lock est bloqué.</li>
+                <li>Mount l'afs : si tout est cassé, il peut être utile de
+                <a href="https://docs.forge.epita.fr/epita/environment/from-home/afs/" target="_blank">mount l'afs depuis un autre pc</a>.
+                De là il est possible de modifier
+                <code>$AFS_DIR/.confs/bashrc</code> et
+                <code>$AFS_DIR/.confs/install.sh</code> puis de redémarrer le
+                pc.</li>
+            </ul>
         </div>
     </body>
 
