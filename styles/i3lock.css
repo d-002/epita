@@ -363,6 +363,11 @@ input:hover {
 
 /* annotations */
 
+.annotation:before {
+    content: "Sample debug annotation";
+    color: #f00;
+}
+
 .annotation.author-favorite:before {
     content: "Favori de l'auteur";
     border-color: #e1c75d;
