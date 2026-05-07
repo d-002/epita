@@ -19,7 +19,7 @@ class Rain {
 
   draw() {
     for (let i = 0; i < this.length; i++) {
-      const char = String.fromCharCode(parseInt(Math.random() * 20 + 12448));
+      const c = String.fromCharCode(parseInt(Math.random() * 20 + 12448));
       let t, color;
       if (i > this.length * 0.8) {
         t = parseInt((i / this.length - 0.7) * 5 * 255);
@@ -39,7 +39,7 @@ class Rain {
       this.manager.ctx.fillStyle = "#000000";
       this.manager.ctx.fillRect(x, y, XSTEP, YSTEP);
       this.manager.ctx.fillStyle = color;
-      this.manager.ctx.fillText(char, x - 1, y + 10);
+      this.manager.ctx.fillText(c, x - 1, y + 10);
     }
   }
 }

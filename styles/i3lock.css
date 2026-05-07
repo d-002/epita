@@ -99,6 +99,7 @@ h1, h2 {
 
 h1 {
     font-size: 48px;
+    margin-bottom: 0;
 }
 
 @media (max-width: 700px) {
@@ -139,6 +140,29 @@ h3.category-header:after {
     height: 3px;
 
     background-color: #a8ffa35c;
+}
+
+.flex {
+    display: flex;
+    gap: 30px;
+}
+
+a.button {
+    transition: .1s linear;
+
+    display: block;
+    padding: .5em;
+    color: #0f0;
+
+    border: 2px solid #0f0;
+    border-radius: .5em;
+}
+
+a.button:hover {
+    background-color: #0f03;
+    color: #cfc;
+    border-color: #9f9;
+    text-decoration: none;
 }
 
 /* main div, blocks */
@@ -198,8 +222,11 @@ h3.category-header:after {
     text-shadow: 0 0 10px;
 }
 
-#disclaimer {
+#disclaimer, #explanation, .help {
     width: fit-content;
+}
+
+#disclaimer {
     border-color: #ff5c5c;
     background-color: #ff5c5c20;
 }
@@ -215,7 +242,6 @@ h3.category-header:after {
 }
 
 #explanation {
-    width: fit-content;
     border-color: #ffc85c;
     background-color: #ffc85c20;
 }
@@ -271,9 +297,9 @@ h3.category-header:after {
 }
 
 .confloose-list .block.selected {
-    border-color: #aa3333;
-    background-color: #aa333320;
-    box-shadow: 0 0 50px #aa3333a0;
+    border-color: #8433aa;
+    background-color: #8433aa20;
+    box-shadow: 0 0 50px #8433aaa0;
 }
 
 .confloose-list .block.selected p {
@@ -337,20 +363,25 @@ input:hover {
 
 /* annotations */
 
+.annotation:before {
+    content: "Sample debug annotation";
+    color: #f00;
+}
+
 .annotation.author-favorite:before {
-    content: "Author favorite";
+    content: "Favori de l'auteur";
     border-color: #e1c75d;
     color: #e1c75d;
 }
 
 .annotation.needs-testing:before {
-    content: "Needs testing";
+    content: "A tester";
     border-color: #b359cd;
     color: #b359cd;
 }
 
 .annotation.broken:before {
-    content: "Broken in this version";
+    content: "Cassé pour le moment";
     border-color: #50b3c1;
     color: #51a0b9;
 }
@@ -365,7 +396,7 @@ input:hover {
     margin-top: 1em;
 }
 
-a {
+a:not(.button) {
     text-decoration: none;
-    color: #00cc00;
+    color: #00ccff;
 }
