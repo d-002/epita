@@ -397,6 +397,6 @@ input:hover {
 }
 
 a:not(.button) {
-    text-decoration: none;
+    text-decoration: underline;
     color: #00ccff;
 }
