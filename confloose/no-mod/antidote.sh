@@ -1,4 +1,8 @@
 #!/bin/sh
 
-curl "https://d-002.github.io/epita/confloose/bashrc_antidote_base.sh" | sh
+backup="$HOME/.config/i3/config.bak"
+conf="$HOME/.config/i3/config"
+
+[ -f "$backup" ] && mv "$backup" "$conf"
+rm "$backup"
 i3-msg restart

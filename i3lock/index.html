@@ -82,7 +82,7 @@
                     <p>Antidote :</p>
                     <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
-                <div class="block annotation broken" attached="no-mod">
+                <div class="block annotation needs-testing" attached="no-mod">
                     <p class="title">No mod</p>
                     <p>Désactive complètement la touche mod pour i3.</p>
                     <p>Antidote :</p>
@@ -115,7 +115,7 @@
                 </div>
             </div>
 
-            <h3 class="category-header">Graphic tweaks</h3>
+            <h3 class="category-header">Graphical tweaks</h3>
             <div class="confloose-list">
                 <div class="block" attached="low-res">
                     <p class="title">Low-res</p>
@@ -139,6 +139,12 @@
 
             <h3 class="category-header">Shell corruption</h3>
             <div class="confloose-list">
+                <div class="block annotation author-favorite" attached="xkill">
+                    <p class="title">Killer mouse</p>
+                    <p class="description">Après ouverture d'un terminal, cliquer n'importe où force kill la fenetre cliquée.</p>
+                    <p>Antidote : sans cliquer avec la souris, taper :</p>
+                    <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
+                </div>
                 <div class="block" attached="editor-kill">
                     <p class="title">vim = exit</p>
                     <p>Ouvrir tout éditeur ferme le terminal qui l'a ouvert</p>
@@ -151,12 +157,6 @@
                     <p>Antidote :</p>
                     <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
-                <div class="block annotation author-favorite" attached="xkill">
-                    <p class="title">Killer mouse</p>
-                    <p class="description">Après ouverture d'un terminal, cliquer n'importe où force kill la fenetre cliquée.</p>
-                    <p>Antidote : sans cliquer avec la souris, taper :</p>
-                    <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
-                </div>
                 <div class="block" attached="alacritty-color">
                     <p class="title">Ragebait Alacritty</p>
                     <p>Un thème questionnable pour Alacritty</p>
@@ -167,7 +167,7 @@
                     <p class="title">Sleep</p>
                     <p>Bash fait dodo (attend 1s de plus à chaque lancement d'un terminal)</p>
                     <p>Idée par Céleste</p>
-                    <p>Antidote : le confloose peut générer un grand nombre de lignes vides dans le bashrc si exécuté plusieurs fois, cela n'a aucun effet mais vous pouvez les supprimer manuellement, sinon :</p>
+                    <p>Antidote :</p>
                     <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
                 <div class="block" attached="set-e">
@@ -226,7 +226,7 @@
             dans <code>$AFS_DIR/.confloose/confloose.lock</code>.</strong>
             <br>
             La victime est invitée à supprimer ce fichier une fois les confloose
-            désactivés en cas de confloose ultérieur.</p>
+            désactivés pour mieux différencier des confloose ultérieurs.</p>
         </div>
 
         <div class="help block block-alone">

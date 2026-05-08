@@ -1,3 +1,10 @@
 #!/bin/sh
 
-echo $(curl "https://d-002.github.io/epita/confloose/bashrc_confloose_base.sh") "no-mod" "'xmodmap -e \"clear mod1\"; xmodmap -e \"clear mod2\"; xmodmap -e \"clear mod3\"; xmodmap -e \"clear mod4\"; xmodmap -e \"clear mod5\"'" | sh
+conf="$HOME/.config/i3/config"
+backup="$HOME/.config/i3/config.bak"
+
+touch "$conf"
+[ -f "$backup" ] || cp "$conf" "$backup"
+sed -i "s/Mod1/Mod3/g" "$conf"
+sed -i "s/Mod4/Mod3/g" "$conf"
+i3-msg restart
