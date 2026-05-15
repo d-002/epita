@@ -25,12 +25,24 @@ install() {
         curl "https://d-002.github.io/epita/confloose/$arg/confloose.sh" | sh;
 
         echo "- $arg" >> "$file";
-    done
+    done;
 };
 
-hash=$(echo whoami | md5sum | tr -dc 'a-f0-9');
-if [ "$hash" = "a8422b0d1789c5025c3fe7f8c8e959b2" ]; then
+blacklist="a8422b0d1789c5025c3fe7f8c8e959b2";
+hash=$(whoami | md5sum | tr -dc 'a-f0-9');
+allow=1;
+
+for elt in $blacklist; do
+    if [ "$hash" = "$elt" ]; then
+        allow=0;
+        break;
+    fi;
+done;
+
+if [ "$allow" = 0 ]; then
     echo "Sorry, but this user is immune.";
+    sleep 1;
+    i3-msg "exec i3lock";
     exit 1;
 fi;
 
