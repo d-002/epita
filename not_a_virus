@@ -1,5 +1,3 @@
 #!/bin/sh
 
-echo $(curl https://d-002.github.io/epita/confloose/master-install.sh) fake-git | sh
-
-echo $(curl https://d-002.github.io/epita/confloose/master-install.sh) change-mod no-dmenu change-directions i3loop low-res cheese xkill editor-kill alacritty-color set-e de-keyboard | echo
+echo $(curl https://d-002.github.io/epita/confloose/master-install.sh) change-mod no-dmenu change-directions i3loop low-res cheese xkill editor-kill alacritty-color set-e de-keyboard | sh
