@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <link rel="stylesheet" href="../styles/main.css?v=1.2.1">
-        <link rel="stylesheet" href="../styles/i3lock.css?v=1.2.1">
+        <link rel="stylesheet" href="../styles/main.css?v=1.2.2">
+        <link rel="stylesheet" href="../styles/i3lock.css?v=1.2.2">
         <title>EPITA/confloose</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -76,13 +76,27 @@
 
             <h3 class="category-header">i3-related stuff</h3>
             <div class="confloose-list">
+                <div class="block annotation author-favorite" attached="tab-i3lock">
+                    <p class="title">Tab i3lock</p>
+                    <p>Appuyer sur Tab lock la session</p>
+                    <p>Idée par vMatt</p>
+                    <p>Antidote :</p>
+                    <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
+                </div>
+                <div class="block" attached="rotate-slightly">
+                    <p class="title">Rotate slightly</p>
+                    <p>L'écran est tourné de 2° sur le côté</p>
+                    <p>Idée par Stap</p>
+                    <p>Antidote :</p>
+                    <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
+                </div>
                 <div class="block" attached="change-mod">
                     <p class="title">Win <> Alt</p>
                     <p>Echange la touche Mod pour i3 entre Windows et Alt</p>
                     <p>Antidote :</p>
                     <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
-                <div class="block annotation needs-testing" attached="no-mod">
+                <div class="block" attached="no-mod">
                     <p class="title">No mod</p>
                     <p>Désactive complètement la touche mod pour i3.</p>
                     <p>Antidote :</p>
@@ -143,6 +157,13 @@
                     <p class="title">Killer mouse</p>
                     <p class="description">Après ouverture d'un terminal, cliquer n'importe où force kill la fenetre cliquée.</p>
                     <p>Antidote : sans cliquer avec la souris, taper :</p>
+                    <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
+                </div>
+                <div class="block" attached="ls_parent">
+                    <p class="title">ls parent</p>
+                    <p class="description"><code>ls</code> liste le contenu du dossier parent à la place.</p>
+                    <p>Idée par Marcus</p>
+                    <p>Antidote :</p>
                     <input type="text" onclick="clip(this)" readonly="readonly" class="antidote">
                 </div>
                 <div class="block" attached="editor-kill">
@@ -249,6 +270,6 @@
     </body>
 
     <!-- scripts -->
-    <script type="module" src="../scripts/main-i3lock.js?v=1.2.1"></script>
-    <script src="../scripts/clip.js?v=1.2.1"></script>
+    <script type="module" src="../scripts/main-i3lock.js?v=1.2.2"></script>
+    <script src="../scripts/clip.js?v=1.2.2"></script>
 </html>
