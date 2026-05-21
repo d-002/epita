@@ -8,6 +8,6 @@ touch "$conf"
 
 IFS=$'\n'
 for output in $(xrandr | sed -nE "s/(^\S+) connected.*$/\1/p"); do
-    echo "exec_always xrandr --output \"$output\" --transform 0.416,-0.909,0,0.909,0.416,0,0,0,1" >> "$conf"
+    echo "exec_always xrandr --output \"$output\" --transform 0.99996,0.00873,0,-0.00873,0.99996,0,0,0,1" >> "$conf"
 done
 i3-msg restart
